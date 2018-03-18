@@ -1,4 +1,4 @@
-# wintermute-genesis-theme
+# Wintermute Genesis Theme
 A child theme for the Genesis Framework and Wordpress 5.0 or greater.
 
 ## Getting Started

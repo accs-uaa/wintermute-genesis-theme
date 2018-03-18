@@ -585,7 +585,7 @@ th:first-child {
 .site-inner,
 .wrap {
 	margin: 0 auto;
-	max-width: 1200px;
+	width: 1200px;
 }
 
 .site-inner {
@@ -811,8 +811,8 @@ th:first-child {
 }
 
 .entry-title {
-	font-size: 36px;
-	font-size: 3.6rem;
+	font-size: 40px;
+	font-size: 4.0rem;
 	text-align: center;
 }
 
@@ -928,9 +928,12 @@ img.alignright,
 .site-header {
 	background-color: #ffffff;
 	border-bottom: 1px solid #333333;
+	position: relative;
 }
 
 .site-header > .wrap {
+	width: 1200px;
+	margin: auto;
 	padding: 10px 0;
 }
 
@@ -1142,6 +1145,11 @@ img.alignright,
 
 /* 8.1. Page Banners
 --------------------------------------------- */
+
+.wp-block-cover-image {
+	height: 30vmax !important;
+	min-height: 30vmax !important;
+}
 
 .alignfull {
  width: 98vw !important;
@@ -1741,45 +1749,22 @@ button:focus, button:hover, input[type="button"]:focus, input[type="button"]:hov
 /* 10. Media Queries
 ---------------------------------------------------------------------------------------------------- */
 
-/* 10.1. Max-width: 1340px
+/* 10.1. Max-width: 1320px
 --------------------------------------------- */
 
-@media only screen and (max-width: 1340px) {
+@media only screen and (max-width: 1320px) {
 
 	.site-inner,
 	.wrap {
-		max-width: 1140px;
+		width: 100%;
+		padding-left: 5vw;
+		padding-right: 5vw;
 	}
-
-	.content-sidebar-sidebar .content-sidebar-wrap,
-	.sidebar-content-sidebar .content-sidebar-wrap,
-	.sidebar-sidebar-content .content-sidebar-wrap {
-		width: 920px;
-	}
-
-	.content,
-	.site-header .widget-area {
-		width: 800px;
-	}
-
-	.sidebar-content-sidebar .content,
-	.sidebar-sidebar-content .content,
-	.content-sidebar-sidebar .content {
-		width: 580px;
-	}
-
-	.sidebar-primary {
-		width: 300px;
-	}
-
-	.footer-widgets-1,
-	.footer-widgets-2,
-	.footer-widgets-3 {
-		width: 340px;
-	}
-
-	.footer-widgets-1 {
-		margin-right: 60px;
+	
+	.site-header > .wrap {
+		width: 100%;
+		padding-left: 5vw;
+		padding-right: 5vw;
 	}
 
 }
@@ -1789,36 +1774,18 @@ button:focus, button:hover, input[type="button"]:focus, input[type="button"]:hov
 
 @media only screen and (max-width: 1200px) {
 
-	.site-inner,
-	.wrap {
-		max-width: 960px;
+	.title-area {
+		max-width: 100%;
+		width: 100%;
+		float: none;
 	}
 
-	.content-sidebar-sidebar .content-sidebar-wrap,
-	.sidebar-content-sidebar .content-sidebar-wrap,
-	.sidebar-sidebar-content .content-sidebar-wrap {
-		width: 740px;
-	}
-
-	.content,
 	.site-header .widget-area {
-		width: 620px;
+		display: none;
 	}
-
-	.sidebar-content-sidebar .content,
-	.sidebar-sidebar-content .content,
-	.content-sidebar-sidebar .content {
-		width: 400px;
-	}
-
-	.footer-widgets-1,
-	.footer-widgets-2,
-	.footer-widgets-3 {
-		width: 300px;
-	}
-
-	.footer-widgets-1 {
-		margin-right: 30px;
+	
+	.site-inner {
+		padding-top: 50px;
 	}
 
 }
@@ -1830,53 +1797,10 @@ button:focus, button:hover, input[type="button"]:focus, input[type="button"]:hov
 --------------------------------------------- */
 
 @media only screen and (max-width: 1023px) {
-
-	.site-inner,
-	.wrap {
-		max-width: 800px;
-	}
-
-	.content,
-	.content-sidebar-sidebar .content,
-	.content-sidebar-sidebar .content-sidebar-wrap,
-	.footer-widgets-1,
-	.footer-widgets-2,
-	.footer-widgets-3,
-	.genesis-responsive-menu .genesis-nav-menu .sub-menu,
-	.genesis-responsive-menu .genesis-nav-menu .sub-menu a,
-	.sidebar-content-sidebar .content,
-	.sidebar-content-sidebar .content-sidebar-wrap,
-	.sidebar-primary,
-	.sidebar-secondary,
-	.sidebar-sidebar-content .content,
-	.sidebar-sidebar-content .content-sidebar-wrap,
-	.site-header .widget-area,
-	.title-area {
-		width: 100%;
-	}
-
-	.site-header .wrap {
-		padding-left: 5%;
-		padding-right: 5%;
-	}
-
-	.genesis-nav-menu li,
-	.header-image .title-area,
-	.site-header ul.genesis-nav-menu,
-	.site-header .search-form {
-		float: none;
-	}
-
-	.genesis-nav-menu,
-	.site-description,
-	.site-header .title-area,
-	.site-header .widget-area,
-	.site-title {
-		text-align: center;
-	}
-
-	.site-header .search-form {
-		margin: 16px auto;
+	
+	.entry-title {
+		font-size: 38px;
+		font-size: 3.8rem;
 	}
 	
 	h1 {
@@ -1931,7 +1855,7 @@ button:focus, button:hover, input[type="button"]:focus, input[type="button"]:hov
 
 	/* 10.4.1. Genesis Responsive Menus */
 
-	.genesis-responsive-menu .wrap {
+	/* .genesis-responsive-menu .wrap {
 		padding: 0;
 	}
 
@@ -2065,7 +1989,7 @@ button:focus, button:hover, input[type="button"]:focus, input[type="button"]:hov
 	.footer-widgets-1,
 	.footer-widgets-2 {
 		margin: 0 auto 40px;
-	}
+	} */
 
 }
 
@@ -2078,15 +2002,6 @@ button:focus, button:hover, input[type="button"]:focus, input[type="button"]:hov
 	body > div {
 		font-size: 18px;
 		font-size: 1.8rem;
-	}
-
-	.site-inner {
-		padding: 5% 5% 0;
-	}
-
-	.wrap {
-		padding-left: 5%;
-		padding-right: 5%;
 	}
 
 	.after-entry,
@@ -2126,6 +2041,11 @@ button:focus, button:hover, input[type="button"]:focus, input[type="button"]:hov
 	.two-thirds {
 		margin: 0;
 		width: 100%;
+	}
+	
+	.entry-title {
+		font-size: 36px;
+		font-size: 3.6rem;
 	}
 	
 	h1 {
@@ -2193,6 +2113,11 @@ button:focus, button:hover, input[type="button"]:focus, input[type="button"]:hov
 		width: 150px;
 	}
 	
+	.entry-title {
+		font-size: 34px;
+		font-size: 3.4rem;
+	}
+	
 	h1 {
 		font-size: 34px;
 		font-size: 3.4rem;
@@ -2228,6 +2153,21 @@ button:focus, button:hover, input[type="button"]:focus, input[type="button"]:hov
 --------------------------------------------- */
 
 @media only screen and (max-width: 639px) {
+
+	.site-inner,
+	.wrap {
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+	
+	.site-header > .wrap {
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+	.entry-title {
+		font-size: 32px;
+		font-size: 3.2rem;
+	}
 
 	h1 {
 		font-size: 32px;
@@ -2293,6 +2233,11 @@ button:focus, button:hover, input[type="button"]:focus, input[type="button"]:hov
 
 @media only screen and (max-width: 460px) {
 
+	.entry-title {
+		font-size: 30px;
+		font-size: 3.0rem;
+	}
+	
 	h1 {
 		font-size: 30px;
 		font-size: 3.0rem;
@@ -2349,14 +2294,122 @@ button:focus, button:hover, input[type="button"]:focus, input[type="button"]:hov
 --------------------------------------------- */
 
 @media only screen and (max-width: 400px) {
+		.entry-title {
+		font-size: 24px;
+		font-size: 2.4rem;
+	}
+	
+	h1 {
+		font-size: 22px;
+		font-size: 2.2rem;
+	}
 
+	h2 {
+		font-size: 20px;
+		font-size: 2.0rem;
+	}
+
+	h3 {
+		font-size: 19px;
+		font-size: 1.9rem;
+	}
+
+	h4 {
+		font-size: 18px;
+		font-size: 1.8rem;
+	}
+
+	h5 {
+		font-size: 17px;
+		font-size: 1.7rem;
+	}
+
+	h6 {
+		font-size: 16px;
+		font-size: 1.6rem;
+	}
+
+	body {
+		font-size: 15px;
+		font-size: 1.5rem;
+	}
+	
+	p, ul, ol {
+		font-size: 15px;
+		font-size: 1.5rem;
+	}
+	
+	.news-box p, .news-box ul {
+		line-height: 105%;
+		font-size: 15px;
+		font-size: 1.5rem;
+	}
+	
+	.sitemap-list li {
+		font-size: 15px;
+		font-size: 1.5rem;
+	}
 }
 
 /* 10.10. Max-width: 350px
 --------------------------------------------- */
 
 @media only screen and (max-width: 350px) {
+		.entry-title {
+		font-size: 22px;
+		font-size: 2.2rem;
+	}
+	
+	h1 {
+		font-size: 20px;
+		font-size: 2.0rem;
+	}
 
+	h2 {
+		font-size: 19px;
+		font-size: 1.9rem;
+	}
+
+	h3 {
+		font-size: 18px;
+		font-size: 1.8rem;
+	}
+
+	h4 {
+		font-size: 17px;
+		font-size: 1.7rem;
+	}
+
+	h5 {
+		font-size: 16px;
+		font-size: 1.6rem;
+	}
+
+	h6 {
+		font-size: 14px;
+		font-size: 1.4rem;
+	}
+
+	body {
+		font-size: 14px;
+		font-size: 1.4rem;
+	}
+	
+	p, ul, ol {
+		font-size: 14px;
+		font-size: 1.4rem;
+	}
+	
+	.news-box p, .news-box ul {
+		line-height: 105%;
+		font-size: 14px;
+		font-size: 1.4rem;
+	}
+	
+	.sitemap-list li {
+		font-size: 14px;
+		font-size: 1.4rem;
+	}
 }
 
 /* 11. Print Styles
