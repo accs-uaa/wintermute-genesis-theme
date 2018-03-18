@@ -35,3 +35,16 @@
 	color: #111111 !important;
 	border-bottom: 1px solid #333333;
 }
+
+.sidr .widget {
+	padding-left: 0;
+	padding-right: 0;
+	padding-top: 8px;
+	padding-bottom: 8px;
+}
+
+.sidr {
+	overflow-y: scroll;
+	border-left: 2px solid #333333;
+	border-right: 2px solid #333333;
+}
