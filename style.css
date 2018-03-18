@@ -4,6 +4,9 @@
 	Author: Timm Nawrocki
 	
 	Version: 1.0
+	
+	Template: genesis
+	Template Version: 2.6.1
 
 	License: GPL-2.0+
 	License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -1541,7 +1544,7 @@ img.alignright,
 
 .site-footer {
 	background-color: #fff;
-	border-top: 1px solid #eee;
+	border-top: 1px solid #333333;
 	font-size: 16px;
 	font-size: 1.6rem;
 	line-height: 1;
@@ -1550,7 +1553,8 @@ img.alignright,
 }
 
 .site-footer p {
-	margin-bottom: 0;
+	margin-bottom: 20px;
+	text-align: left;
 }
 
 /* 8.8. Footer Widgets
