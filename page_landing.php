@@ -1,15 +1,14 @@
 <?php
 /**
- * Genesis Sample.
+ * Wintermute
  *
- * This file adds the landing page template to the Genesis Sample Theme.
+ * This file adds the landing page template to the Wintermute Theme.
  *
  * Template Name: Landing
  *
- * @package Genesis Sample
- * @author  StudioPress
+ * @package Wintermute
+ * @author  Timm Nawrocki
  * @license GPL-2.0+
- * @link    http://www.studiopress.com/
  */
 
 // Add landing page body class to the head.
