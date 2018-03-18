@@ -1,0 +1,50 @@
+/*
+	Theme Name: Wintermute
+	Description: This stylesheet contains configuration specific to individual sites.
+	Author: Timm Nawrocki
+
+	Version: 1.0
+
+	License: GPL-2.0+
+	License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+	Text Domain: wintermute
+*/
+
+/* Contents
+1. Side Menu Navigation
+	
+*/
+
+/* 1. Side Menu Navigation
+---------------------------------------------------------------------------------------------------- */
+
+.slide-nav-link {
+		width: 100%;
+		text-align: center;
+		right: unset;
+		left: unset;
+		top: 121px;
+		font-size: 24px;
+		font-size: 2.4 rem;
+		border-bottom: 1px solid #333333;
+	}
+
+.slide-nav-link:hover, .slide-nav-link:focus, .slide-nav-link:active, .slide-nav-link:visited {
+	background-color: #ffffff !important;
+	color: #111111 !important;
+	border-bottom: 1px solid #333333;
+}
+
+.sidr .widget {
+	padding-left: 0;
+	padding-right: 0;
+	padding-top: 8px;
+	padding-bottom: 8px;
+}
+
+.sidr {
+	overflow-y: scroll;
+	border-left: 2px solid #333333;
+	border-right: 2px solid #333333;
+}

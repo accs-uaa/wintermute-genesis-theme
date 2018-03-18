@@ -1,13 +1,12 @@
 <?php
 /**
- * Genesis Sample.
+ * Wintermute
  *
- * This file adds functions to the Genesis Sample Theme.
+ * This file adds functions to the Wintermute Theme.
  *
- * @package Genesis Sample
- * @author  StudioPress
+ * @package Wintermute
+ * @author  Timm Nawrocki
  * @license GPL-2.0+
- * @link    http://www.studiopress.com/
  */
 
 // Start the engine.
@@ -41,9 +40,9 @@ include_once( get_stylesheet_directory() . '/lib/woocommerce/woocommerce-output.
 include_once( get_stylesheet_directory() . '/lib/woocommerce/woocommerce-notice.php' );
 
 // Child theme (do not remove).
-define( 'CHILD_THEME_NAME', 'Genesis Sample' );
-define( 'CHILD_THEME_URL', 'http://www.studiopress.com/' );
-define( 'CHILD_THEME_VERSION', '2.3.0' );
+define( 'CHILD_THEME_NAME', 'Wintermute' );
+define( 'CHILD_THEME_URL', 'https://accs.uaa.alaska.edu' );
+define( 'CHILD_THEME_VERSION', '1.0' );
 
 // Enqueue Scripts and Styles.
 add_action( 'wp_enqueue_scripts', 'genesis_sample_enqueue_scripts_styles' );
@@ -94,8 +93,8 @@ add_theme_support( 'genesis-responsive-viewport' );
 
 // Add support for custom header.
 add_theme_support( 'custom-header', array(
-	'width'           => 600,
-	'height'          => 160,
+	'width'           => 875,
+	'height'          => 200,
 	'header-selector' => '.site-title a',
 	'header-text'     => false,
 	'flex-height'     => true,
@@ -147,5 +146,95 @@ function genesis_sample_comments_gravatar( $args ) {
 	$args['avatar_size'] = 60;
 
 	return $args;
+
+}
+
+//* Functions added specific to Wintermute Theme
+//*----------------------------------------------------------------------------------------------
+
+function my_theme_setup() {
+	// Add support for wide images
+	add_theme_support( 'align-full' );
+}
+add_action( 'after_setup_theme', 'my_theme_setup' );
+
+// Change Favicon
+add_filter( 'genesis_pre_load_favicon', 'new_icon' );
+function new_icon( $icon) {
+    $icon = '/favicon.ico';
+    return $icon;
+}
+
+// Customize search form input box text
+add_filter( 'genesis_search_text', 'sp_search_text' );
+function sp_search_text( $text ) {
+	return esc_attr( 'Search...' );
+}
+
+// Add Dashicon to search form button 
+add_filter( 'genesis_search_button_text', 'wpsites_search_button_icon' );
+function wpsites_search_button_icon( $text ) {
+	return esc_attr( '&#xf179;' );
+}
+
+// Add custom footer
+remove_action( 'genesis_footer', 'genesis_do_footer' );
+add_action( 'genesis_footer', 'sp_custom_footer' );
+function sp_custom_footer() {
+	?>
+	<div class="site-footer-inner">
+		<p>&copy; 2018 <a href="https://accs.uaa.alaska.edu">Alaska Center for Conservation Science</a>. This website was designed and is maintained by the University of Alaska Anchorage-<a href="http://accs.uaa.alaska.edu">Alaska Center for Conservation Science</a> (UAA-ACCS). UAA is accredited as an educational institution by the Northwest Commission on Colleges and Universities and is an EEO/AA employer.</p>
+		<p><a href="mailto:twnawrocki@alaska.edu">Contact Website Administrator</a> | <a href="/sitemap/">Sitemap</a></p>
+	</div>
+	<?php
+}
+
+// Disable Visual Editor
+add_filter('user_can_richedit' , create_function('' , 'return false;') , 50);
+
+// Disable Add Media Button
+add_action('admin_init', 'remove_all_media_buttons');
+function remove_all_media_buttons() {
+	remove_all_actions('media_buttons');
+}
+
+// Disable Quicktags in HTML Editor
+add_filter('quicktags_settings', 'cyb_quicktags_settings');
+function cyb_quicktags_settings( $qtInit  ) {
+	//Set to emtpy string, empty array or false won't work. It must be set to ","
+	$qtInit['buttons'] = ',';
+	return $qtInit;
+}
+
+// Remove Admin Menus from Dashboard Sidebar
+function remove_menus() 
+	{
+	global $submenu;
+	remove_submenu_page ( 'themes.php', 'theme-editor.php' ); // Appearance-->Editor
+}
+add_action('admin_menu', 'remove_menus', 102);
+
+add_action( 'genesis_before', 'prefix_remove_entry_header' );
+
+/**
+ * Remove Entry Header
+ */
+function prefix_remove_entry_header()
+{
+
+	if ( ! is_front_page() ) { return; }
+
+	//* Remove the entry header markup (requires HTML5 theme support)
+	remove_action( 'genesis_entry_header', 'genesis_entry_header_markup_open', 5 );
+	remove_action( 'genesis_entry_header', 'genesis_entry_header_markup_close', 15 );
+
+	//* Remove the entry title (requires HTML5 theme support)
+	remove_action( 'genesis_entry_header', 'genesis_do_post_title' );
+
+	//* Remove the entry meta in the entry header (requires HTML5 theme support)
+	remove_action( 'genesis_entry_header', 'genesis_post_info', 12 );
+
+	//* Remove the post format image (requires HTML5 theme support)
+	remove_action( 'genesis_entry_header', 'genesis_do_post_format_image', 4 );
 
 }
