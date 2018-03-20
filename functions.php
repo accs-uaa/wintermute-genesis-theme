@@ -183,7 +183,7 @@ add_action( 'genesis_footer', 'sp_custom_footer' );
 function sp_custom_footer() {
 	?>
 	<div class="site-footer-inner">
-		<p>&copy; 2018 <a href="https://accs.uaa.alaska.edu">Alaska Center for Conservation Science</a>. This website was designed and is maintained by the University of Alaska Anchorage-<a href="http://accs.uaa.alaska.edu">Alaska Center for Conservation Science</a> (UAA-ACCS). UAA is accredited as an educational institution by the Northwest Commission on Colleges and Universities and is an EEO/AA employer.</p>
+		<p>&copy; 2018 <a href="http://accs.uaa.alaska.edu">Alaska Center for Conservation Science</a>. This website was designed and is maintained by the University of Alaska Anchorage-<a href="http://accs.uaa.alaska.edu">Alaska Center for Conservation Science</a> (UAA-ACCS). UAA is accredited as an educational institution by the Northwest Commission on Colleges and Universities and is an EEO/AA employer.</p>
 		<p><a href="mailto:twnawrocki@alaska.edu">Contact Website Administrator</a> | <a href="/sitemap/">Sitemap</a></p>
 	</div>
 	<?php

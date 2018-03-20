@@ -442,7 +442,7 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"],
 .button {
-	background-color: #333;
+	background-color: #dddddd;
 	border: 0;
 	color: #fff;
 	cursor: pointer;
@@ -1179,10 +1179,12 @@ img.alignright,
 
 .entry-content ol > li {
 	list-style-type: decimal;
+	padding-bottom: 15px;
 }
 
 .entry-content ul > li {
 	list-style-type: disc;
+	padding-bottom: 15px;
 }
 
 .entry-content ol ol,
@@ -1207,8 +1209,16 @@ img.alignright,
 	width: 100%;
 	border: 2px solid #ff0000;
 	margin-top: 10px;
-	margin-bottom: 10px;
+	margin-bottom: 40px;
 	padding: 10px;
+}
+
+.recent-news ul {
+	margin-bottom: 0px;
+}
+
+.recent-news ul > li {
+	padding-bottom: 15px;
 }
 
 .news-box {
@@ -1244,11 +1254,18 @@ img.alignright,
 	vertical-align: top;
 }
 
+.key-pair {
+	padding-top: 30px;
+}
+
+.key-pair p {
+	margin: 0 0 10px;
+}
+
 /* 8.4. Buttons
 --------------------------------------------- */
 
 .button-primary {
-	font-family: 'Open Sans', sans-serif;
 	background: #2a80b5;
 	background-image: -webkit-linear-gradient(top, #2a80b5, #226894);
 	background-image: -moz-linear-gradient(top, #2a80b5, #226894);
@@ -1258,11 +1275,7 @@ img.alignright,
 	-webkit-border-radius: 10;
 	-moz-border-radius: 10;
 	border-radius: 10px;
-	font-family: "Times New Roman", Times, Serif;
 	color: #ffffff !important;
-	font-size: 24px;
-	font-size: 2.4rem;
-	font-weight: 600;
 	padding: 10px 20px 10px 20px;
 	margin: 0px 0px 30px 0px;
 	text-decoration: none !important;
@@ -2016,7 +2029,9 @@ button:focus, button:hover, input[type="button"]:focus, input[type="button"]:hov
 	.entry-comments,
 	.entry-pings,
 	.sidebar .widget {
-		padding: 30px;
+		padding-top: 30px;
+		padding-right: 10px;
+		padding-left: 10px;
 		margin-bottom: 5%;
 	}
 

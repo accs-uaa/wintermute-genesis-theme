@@ -12,11 +12,12 @@
 */
 
 /* Contents
-1. Side Menu Navigation
+1. Superside Me
+2. wpDataTables
 	
 */
 
-/* 1. Side Menu Navigation
+/* 1. Superside Me
 ---------------------------------------------------------------------------------------------------- */
 
 .slide-nav-link {
@@ -48,3 +49,7 @@
 	border-left: 2px solid #333333;
 	border-right: 2px solid #333333;
 }
+
+/* 2. wpDataTables
+---------------------------------------------------------------------------------------------------- */
+
