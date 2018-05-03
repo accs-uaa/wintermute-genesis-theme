@@ -216,9 +216,17 @@ add_action('admin_menu', 'remove_menus', 102);
 
 add_action( 'genesis_before', 'prefix_remove_entry_header' );
 
-/**
- * Remove Entry Header
- */
+// Remove admin bar for subscribers
+
+add_action('set_current_user', 'cc_hide_admin_bar');
+function cc_hide_admin_bar() {
+  if (!current_user_can('edit_posts')) {
+    show_admin_bar(false);
+  }
+}
+
+// Remove Entry Header
+
 function prefix_remove_entry_header()
 {
 
@@ -237,4 +245,10 @@ function prefix_remove_entry_header()
 	//* Remove the post format image (requires HTML5 theme support)
 	remove_action( 'genesis_entry_header', 'genesis_do_post_format_image', 4 );
 
+}
+
+//* Enqueue Open Sans Google font
+add_action( 'wp_enqueue_scripts', 'sp_load_google_fonts' );
+function sp_load_google_fonts() {
+	wp_enqueue_style( 'google-font-opensans', '//fonts.googleapis.com/css?family=Open+Sans|Roboto+Condensed', array(), CHILD_THEME_VERSION );
 }
