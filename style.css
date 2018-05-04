@@ -51,6 +51,7 @@
 	7.2. Site Header Navigation
 	7.3. After Header Navigation
 	7.4. Footer Navigation
+	7.5. SuperSide Me
 8. Content Area
 	8.1. Page Banners
 	8.2. Entries
@@ -67,17 +68,12 @@
 	9.4. Comments
 	9.5. Login
 10. Media Queries
-	10.1. Max-width: 1340px
-	10.2. Max-width: 1199px
-	10.3. Max-width: 1100px
-	10.4. Max-width: 1023px
-	10.5. Max-width: 850px
-		10.5.1. Responsive Menu
-	10.6. Max-width: 750px
-	10.7. Max-width: 639px
-	10.8. Max-width: 460px
-	10.9. Max-width: 400px
-	10.10. Max-width: 350px
+	10.1. Max-width: 1320px
+	10.2. Max-width: 1172px
+	10.3. Max-width: 1023px
+	10.4. Max-width: 860px
+	10.5. Max-width: 639px
+	10.6. Max-width: 460px
 11. Print Styles
 */
 
@@ -273,7 +269,7 @@ h4,
 h5,
 h6 {
 	font-family: 'Roboto Condensed', sans-serif;
-	font-weight: 600;
+	font-weight: 400;
 	line-height: 1.2;
 	margin: 0 0 10px;
 }
@@ -814,8 +810,8 @@ th:first-child {
 }
 
 .entry-title {
-	font-size: 40px;
-	font-size: 4.0rem;
+	font-size: 36px;
+	font-size: 3.6rem;
 	text-align: center;
 }
 
@@ -937,7 +933,7 @@ img.alignright,
 .site-header > .wrap {
 	width: 1200px;
 	margin: auto;
-	padding: 10px 0;
+	padding: 0;
 }
 
 /* 6.1. Title Area
@@ -946,7 +942,8 @@ img.alignright,
 .title-area {
 	float: left;
 	padding: 10px 0;
-	width: 438px;
+	max-width: 438px;
+	width: 70vw;
 }
 
 .header-image .title-area {
@@ -1009,7 +1006,7 @@ img.alignright,
 	width: 600px;
 }
 
-/* 7. Site Navigation
+/* 7. Genesis Nav Menu
 ---------------------------------------------------------------------------------------------------- */
 
 .genesis-nav-menu {
@@ -1034,7 +1031,6 @@ img.alignright,
 	display: block;
 	padding: 10px 10px 10px 5px;
 	text-decoration: none;
-	text-shadow: 1px 1px 1px #aaaaaa;
 	font-weight: 400;
 	outline: none;
 }
@@ -1044,7 +1040,7 @@ img.alignright,
 .genesis-nav-menu .current-menu-item > a,
 .genesis-nav-menu .sub-menu .current-menu-item > a:focus,
 .genesis-nav-menu .sub-menu .current-menu-item > a:hover  {
-	color: #333333;
+	color: #1e73be;
 	text-decoration: none;
 }
 
@@ -1053,11 +1049,6 @@ img.alignright,
 	left: -9999px;
 	opacity: 0;
 	position: absolute;
-	-webkit-transition: opacity .4s ease-in-out;
-	-moz-transition:    opacity .4s ease-in-out;
-	-ms-transition:     opacity .4s ease-in-out;
-	-o-transition:      opacity .4s ease-in-out;
-	transition:         opacity .4s ease-in-out;
 	width: 300px;
 	z-index: 99;
 }
@@ -1131,6 +1122,7 @@ img.alignright,
 .nav-primary {
 	background-color: #fff;
 	border-bottom: 1px solid #333333;
+	display: none;
 }
 
 /* 7.4. Footer Navigation
@@ -1144,24 +1136,202 @@ img.alignright,
 	padding: 0 20px 10px;
 }
 
+/* 7.5. SuperSide Me
+--------------------------------------------- */
+
+.slide-nav-link {
+	width: 110px !important;
+	text-align: center;
+	right: 5vw !important;
+	left: unset !important;
+	top: 37px;
+	font-size: 20px;
+	font-size: 2.0rem;
+}
+
+.ssme-search, .slide-nav-link, .button.ssme-button.ssme-custom {
+	padding: 0 !important;
+}
+
+.slide-nav-link:hover, .slide-nav-link:focus, .slide-nav-link:active, .slide-nav-link:visited {
+	background-color: #ffffff !important;
+	color: #111111 !important;
+}
+
+.sidr .widget {
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+	padding-top: 8px;
+	padding-bottom: 8px;
+}
+
+.sidr {
+	overflow-y: scroll;
+	border-left: 1px solid #333333;
+	border-right: 1px solid #333333;
+}
+
+.slide-nav-link:before, .search-me:before, .menu-close:before, .sidr .sub-menu-toggle:before, .ssme-search:before, .ssme-button:before {
+	padding-bottom: 4px;
+}
+
+.slide-nav-link:focus, .sidr:focus, .sidr a:focus, .menu-close:focus, .sub-menu-toggle:focus {
+	outline: none !important;
+}
+
+/* 7.6. Entry Content Menu
+--------------------------------------------- */
+
+.entry-content-menu .menu {
+	clear: both;
+	font-size: 22px;
+	font-size: 2.2rem;
+	font-weight: 600;
+	font-family: 'Roboto Condensed', sans-serif;
+	line-height: 1;
+	width: 100%;
+	text-align: center;
+	margin: 0;
+}
+
+.entry-content-menu .menu li li {
+	margin: 0;
+}
+
+.entry-content .entry-content-menu ul, .entry-content .entry-content-menu ol {
+	margin: 0;
+}
+
+.entry-content-menu .menu-item {
+	display: inline-block;
+	margin-bottom: 0;
+	padding-bottom: 0;
+	text-align: left;
+}
+
+.entry-content-menu a {
+	color: #333333;
+	display: block;
+	padding: 10px 10px 10px 5px;
+	text-decoration: none;
+	font-weight: 400;
+	outline: none;
+}
+
+.entry-content-menu a:focus,
+.entry-content-menu a:hover,
+.entry-content-menu .current-menu-item > a,
+.entry-content-menu .sub-menu .current-menu-item > a:focus,
+.entry-content-menu .sub-menu .current-menu-item > a:hover  {
+	color: #1e73be;
+	text-decoration: none;
+}
+
+.entry-content-menu .sub-menu {
+	border-top: 1px solid #dddddd;
+	left: -9999px;
+	opacity: 0;
+	position: absolute;
+	width: 300px;
+	z-index: 99;
+}
+
+.entry-content-menu .sub-menu a {
+	background-color: #ffffff;
+	border: 1px solid #dddddd;
+	border-top: 0;
+	font-size: 20px;
+	font-size: 2.0rem;
+	padding: 15px;
+	position: relative;
+	width: 300px;
+	word-wrap: break-word;
+}
+
+.entry-content-menu .sub-menu .sub-menu {
+	margin: -56px 0 0 199px;
+}
+
+.entry-content-menu .menu-item:hover {
+	position: static;
+}
+
+.entry-content-menu .menu-item:hover > .sub-menu {
+	left: auto;
+	opacity: 1;
+}
+
+.entry-content-menu > .first > a {
+	padding-left: 0;
+}
+
+.entry-content-menu > .last > a {
+	padding-right: 0;
+}
+
+.entry-content-menu > .right {
+	float: right;
+}
+
 /* 8. Content Area
 ---------------------------------------------------------------------------------------------------- */
 
 /* 8.1. Page Banners
 --------------------------------------------- */
 
+.banner-header {
+	width: 100%;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	max-height: 400px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border-bottom: 1px solid #333333;
+}
+
+.banner-header img {
+	width: 100%;
+}
+
+.banner-entry {
+	width: 100%;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	max-height: 400px;
+	border: 1px solid #333333;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+.banner-entry img {
+	 width: 100%;
+}
+
 .wp-block-cover-image {
-	height: 30vmax !important;
-	min-height: 30vmax !important;
+	height: 300px !important;
+	min-height: 300px !important;
 }
 
 .alignfull {
- width: 98vw !important;
- left: 50%;
- right: 50%;
- margin-left: -49vw !important;
- margin-right: -49vw !important;
- text-align: center;
+	width: 100vw !important;
+	left: 50%;
+	right: 50%;
+	margin-left: -50vw !important;
+	margin-right: -50vw !important;
+	text-align: center;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border-top: 1px solid #333333;
+	border-bottom: 1px solid #333333;
 }
 
 /* 8.2. Entries
@@ -1201,6 +1371,12 @@ img.alignright,
 /* 8.3. Page Content
 --------------------------------------------- */
 
+.mission {
+	font-size: 28px;
+	font-size:2.8rem;
+}
+
+
 .item-center {
 	text-align: center;
 	width: 100%;
@@ -1229,12 +1405,6 @@ img.alignright,
 	padding-bottom: 10px;
 	margin-bottom: 20px;
 	display: inline-block;
-}
-
-.news-box p, .news-box ul {
-	line-height: 105%;
-	font-size: 18px;
-	font-size: 1.8rem;
 }
 
 .biography {
@@ -1311,7 +1481,10 @@ img.alignright,
 }
 
 .picture-text-button {
-	margin: 10px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: 20px;
+	margin-right: 20px;
 	width: 250px;
 	text-align: center;
 	-webkit-transition: all 0.5s ease-in-out;
@@ -1338,11 +1511,11 @@ img.alignright,
 	text-decoration: none;
 }
 
-.picture-text-button h5 {
+.picture-text-button h4 {
 	color: #000000;
 }
 
-.picture-text-button:hover h5 {
+.picture-text-button:hover h4 {
 	color: #337ab7;
 }
 
@@ -1421,10 +1594,11 @@ img.alignright,
 
 .picture-button p {
 	text-align: center;
+	font-size: 22px;
+	font-size: 2.2rem;
 }
 
 .logo-thumbnail {
-	font-family: 'Roboto Condensed', sans-serif;
 	color: #333333;
 	font-size: 15px;
 	font-size: 1.5rem;
@@ -1454,44 +1628,27 @@ img.alignright,
 }
 
 .portal-button {
-	font-family: 'Roboto Condensed', sans-serif;
 	color: #333333;
-	font-size: 15px;
+	font-size: 17px;
 	width: 200px;
 	display: inline-block;
 	vertical-align: top;
 	text-align: center;
 	font-weight: bold;
-	-webkit-transition: all 0.2s ease-in-out;
-	-moz-transition: all 0.2s ease-in-out;
-	-ms-transition: all 0.2s ease-in-out;
-	-o-transition: all 0.2s ease-in-out;
-	transition: all 0.2s ease-in-out;
 	margin: 10px 20px 10px 20px;
 }
 
 .portal-button img {
 	border: 1px solid #000000;
-	-webkit-transition: all 0.5s ease-in-out;
-	-moz-transition: all 0.5s ease-in-out;
-	-ms-transition: all 0.5s ease-in-out;
-	-o-transition: all 0.5s ease-in-out;
-	transition: all 0.5s ease-in-out;
 }
 
 .portal-button a {
-	color: #333333 !important;
-	font-size: 16px;
+	color: #333333;
 }
 
-.portal-button:hover {
-	text-shadow: 1px 1px 2px #999999;
-}
-
-.portal-button:hover img {
-	-webkit-box-shadow: 3px 3px 5px #666666;
-	-moz-box-shadow: 3px 3px 5px #666666;
-	box-shadow: 3px 3px 5px #666666;
+.portal-button a:hover {
+	color: #1e73be;
+	text-decoration: none;
 }
 
 /* 8.5. Widgets
@@ -1559,8 +1716,8 @@ img.alignright,
 .site-footer {
 	background-color: #fff;
 	border-top: 1px solid #333333;
-	font-size: 16px;
-	font-size: 1.6rem;
+	font-size: 17px;
+	font-size: 1.7rem;
 	line-height: 1.4;
 	padding: 60px 0;
 	text-align: center;
@@ -1787,239 +1944,150 @@ button:focus, button:hover, input[type="button"]:focus, input[type="button"]:hov
 
 }
 
-/* 10.2. Max-width: 1200px
+/* 10.2. Max-width: 1172px
 --------------------------------------------- */
 
-@media only screen and (max-width: 1200px) {
-
-	.title-area {
-		max-width: 100%;
-		width: 100%;
-		float: none;
-	}
+@media only screen and (max-width: 1172px) {
 
 	.site-header .widget-area {
 		display: none;
 	}
 	
-	.site-inner {
-		padding-top: 50px;
+	.entry-title {
+		font-size: 34px;
+		font-size: 3.4rem;
+	}
+	
+	.mission {
+		font-size: 26px;
+		font-size: 2.6rem;
+	}
+	
+	h1 {
+		font-size: 34px;
+		font-size: 3.4rem;
+	}
+
+	h2 {
+		font-size: 30px;
+		font-size: 3.0rem;
+	}
+
+	h3 {
+		font-size: 26px;
+		font-size: 2.6rem;
+	}
+
+	h4 {
+		font-size: 22px;
+		font-size: 2.2rem;
+	}
+
+	h5 {
+		font-size: 19px;
+		font-size: 1.9rem;
+	}
+
+	h6 {
+		font-size: 17px;
+		font-size: 1.7rem;
+	}
+	
+	body {
+		font-size: 16px;
+		font-size: 1.6rem;
+	}
+	
+	p, ul, ol {
+		font-size: 16px;
+		font-size: 1.6rem;
+	}
+	
+	.site-footer {
+		font-size: 16px;
+		font-size: 1.6rem;
+	}
+	
+	.nav-primary {
+		display: inline;
+	}
+	
+	.entry-content-menu {
+		display: none;
 	}
 
 }
 
-/* 10.3. Max-width: 1100px
---------------------------------------------- */
-
-/* 10.4. Max-width: 1023px
+/* 10.3. Max-width: 1023px
 --------------------------------------------- */
 
 @media only screen and (max-width: 1023px) {
 	
 	.entry-title {
-		font-size: 38px;
-		font-size: 3.8rem;
+		font-size: 32px;
+		font-size: 3.2rem;
+	}
+	
+	.mission {
+		font-size: 24px;
+		font-size: 2.4rem;
 	}
 	
 	h1 {
-		font-size: 38px;
-		font-size: 3.8rem;
+		font-size: 32px;
+		font-size: 3.2rem;
 	}
 
 	h2 {
-		font-size: 34px;
-		font-size: 3.4rem;
+		font-size: 28px;
+		font-size: 2.8rem;
 	}
 
 	h3 {
-		font-size: 30px;
-		font-size: 3.0rem;
+		font-size: 24px;
+		font-size: 2.4rem;
 	}
 
 	h4 {
-		font-size: 26px;
-		font-size: 2.6rem;
+		font-size: 20px;
+		font-size: 2.0rem;
 	}
 
 	h5 {
-		font-size: 22px;
-		font-size: 2.2rem;
+		font-size: 18px;
+		font-size: 1.8rem;
 	}
 
 	h6 {
-		font-size: 20px;
-		font-size: 2.0rem;
+		font-size: 16px;
+		font-size: 1.6rem;
 	}
 
 	body {
-		font-size: 20px;
-		font-size: 2.0rem;
+		font-size: 15px;
+		font-size: 1.5rem;
 	}
 	
 	p, ul, ol {
-		font-size: 20px;
-		font-size: 2.0rem;
+		font-size: 15px;
+		font-size: 1.5rem;
 	}
 	
-	.news-box p, .news-box ul {
-		font-size: 17px;
-		font-size: 1.7rem;
+	.site-footer {
+		font-size: 15px;
+		font-size: 1.5rem;
 	}
-	
-	.sitemap-list li {
-		font-size: 20px;
-		font-size: 2.0rem;
-	}
-
-	/* 10.4.1. Genesis Responsive Menus */
-
-	/* .genesis-responsive-menu .wrap {
-		padding: 0;
-	}
-
-	.genesis-responsive-menu {
-		display: none;
-		position: relative;
-	}
-
-	.genesis-skip-link .skip-link-hidden {
-		display: none;
-		visibility: hidden;
-	}
-
-	.menu-toggle,
-	.sub-menu-toggle {
-		background-color: #fff;
-		border-width: 0;
-		color: #333;
-		display: block;
-		margin: 0 auto;
-		overflow: hidden;
-		text-align: center;
-		visibility: visible;
-	}
-
-	.menu-toggle:focus,
-	.menu-toggle:hover,
-	.sub-menu-toggle:focus,
-	.sub-menu-toggle:hover {
-		background-color: #fff;
-		border-width: 0;
-		color: #c3251d;
-	}
-
-	.menu-toggle {
-		line-height: 22px;
-		position: relative;
-		width: 100%;
-		z-index: 1000;
-	}
-
-	.menu-toggle,
-	.menu-toggle:focus,
-	.menu-toggle:hover {
-		border-top: 1px solid #eee;
-	}
-
-	.menu-toggle::before {
-		font-size: 1.5em;
-		margin-right: 10px;
-		text-rendering: auto;
-	}
-
-	.sub-menu-toggle {
-		float: right;
-		padding: 13px 10px;
-		position: absolute;
-		right: 0;
-		top: 0;
-		z-index: 100;
-	}
-
-	.sub-menu .sub-menu-toggle {
-		padding: 12px 10px;
-	}
-
-	.sub-menu-toggle::before {
-		display: inline-block;
-		text-rendering: auto;
-		-webkit-transform: rotate( 0 );
-		-ms-transform:     rotate( 0 );
-		transform:         rotate( 0 );
-		-webkit-transition: transform .25s ease-in-out;
-		-ms-transition:     transform .25s ease-in-out;
-		transition:         transform .25s ease-in-out;
-	}
-
-	.sub-menu-toggle.activated::before {
-		-webkit-transform: rotate( 180deg );
-		-ms-transform:     rotate( 180deg );
-		transform:         rotate( 180deg );
-	}
-
-	.genesis-responsive-menu .genesis-nav-menu .menu-item {
-		display: block;
-		float: none;
-		position: relative;
-		text-align: left;
-	}
-
-	.genesis-responsive-menu .genesis-nav-menu .menu-item:focus,
-	.genesis-responsive-menu .genesis-nav-menu .menu-item:hover {
-		position: relative;
-	}
-
-	.genesis-responsive-menu .genesis-nav-menu .menu-item a {
-		border: none;
-		margin-bottom: 1px;
-		padding: 15px 20px;
-		width: 100%;
-	}
-
-	.genesis-responsive-menu .genesis-nav-menu .sub-menu {
-		border: none;
-	}
-
-	.genesis-responsive-menu .genesis-nav-menu .menu-item > a:focus ul.sub-menu,
-	.genesis-responsive-menu .genesis-nav-menu .menu-item > a:focus ul.sub-menu .sub-menu {
-		left: 0;
-		margin-left: 0;
-	}
-
-	.genesis-responsive-menu .genesis-nav-menu > .menu-item-has-children > a::after {
-		content: none;
-	}
-
-	.genesis-responsive-menu .genesis-nav-menu .sub-menu {
-		clear: both;
-		display: none;
-		margin: 0;
-		opacity: 1;
-		padding-left: 15px;
-		position: static;
-		width: 100%;
-	}
-
-	.genesis-responsive-menu .genesis-nav-menu .sub-menu .sub-menu {
-		margin: 0;
-	}
-
-	.footer-widgets-1,
-	.footer-widgets-2 {
-		margin: 0 auto 40px;
-	} */
-
 }
 
-/* 10.5. Max-width: 860px
+/* 10.4. Max-width: 860px
 --------------------------------------------- */
 
 @media only screen and (max-width: 860px) {
 
 	body,
 	body > div {
-		font-size: 18px;
-		font-size: 1.8rem;
+		font-size: 14px;
+		font-size: 1.4rem;
 	}
 
 	.after-entry,
@@ -2064,112 +2132,48 @@ button:focus, button:hover, input[type="button"]:focus, input[type="button"]:hov
 	}
 	
 	.entry-title {
-		font-size: 36px;
-		font-size: 3.6rem;
+		font-size: 30px;
+		font-size: 3.0rem;
+	}
+	
+	.mission {
+		font-size: 22px;
+		font-size: 2.2rem;
 	}
 	
 	h1 {
-		font-size: 36px;
-		font-size: 3.6rem;
-	}
-
-	h2 {
-		font-size: 32px;
-		font-size: 3.2rem;
-	}
-
-	h3 {
-		font-size: 28px;
-		font-size: 2.8rem;
-	}
-
-	h4 {
-		font-size: 24px;
-		font-size: 2.4rem;
-	}
-
-	h5 {
-		font-size: 20px;
-		font-size: 2.0rem;
-	}
-
-	h6 {
-		font-size: 19px;
-		font-size: 1.9rem;
-	}
-	
-	body {
-		font-size: 19px;
-		font-size: 1.9rem;
-	}
-	
-	p, ul, ol {
-		font-size: 19px;
-		font-size: 1.9rem;
-	}
-	
-	.news-box p, .news-box ul {
-		font-size: 16px;
-		font-size: 1.6rem;
-	}
-	
-	.sitemap-list li {
-		font-size: 19px;
-		font-size: 1.9rem;
-	}
-	
-	.site-footer p {
-		font-size: 16px;
-		font-size: 1.6rem;
-	}
-
-}
-
-/* 10.6. Max-width: 750px
---------------------------------------------- */
-
-@media only screen and (max-width: 750px) {
-	.site-header .search-form input[type="search"] {
-		width: 150px;
-	}
-	
-	.entry-title {
-		font-size: 34px;
-		font-size: 3.4rem;
-	}
-	
-	h1 {
-		font-size: 34px;
-		font-size: 3.4rem;
-	}
-
-	h2 {
 		font-size: 30px;
 		font-size: 3.0rem;
 	}
 
-	h3 {
+	h2 {
 		font-size: 26px;
 		font-size: 2.6rem;
 	}
 
-	h4 {
+	h3 {
 		font-size: 22px;
 		font-size: 2.2rem;
 	}
 
-	h5 {
-		font-size: 20px;
-		font-size: 2.0rem;
-	}
-
-	h6 {
+	h4 {
 		font-size: 19px;
 		font-size: 1.9rem;
 	}
+
+	h5 {
+		font-size: 17px;
+		font-size: 1.7rem;
+	}
+
+	h6 {
+		font-size: 15px;
+		font-size: 1.5rem;
+	}
+
 }
 
-/* 10.7. Max-width: 639px
+/* 10.5. Max-width: 639px
 --------------------------------------------- */
 
 @media only screen and (max-width: 639px) {
@@ -2184,58 +2188,9 @@ button:focus, button:hover, input[type="button"]:focus, input[type="button"]:hov
 		padding-left: 5px;
 		padding-right: 5px;
 	}
-	.entry-title {
-		font-size: 32px;
-		font-size: 3.2rem;
-	}
-
-	h1 {
-		font-size: 32px;
-		font-size: 3.2rem;
-	}
-
-	h2 {
-		font-size: 28px;
-		font-size: 2.8rem;
-	}
-
-	h3 {
-		font-size: 24px;
-		font-size: 2.4rem;
-	}
-
-	h4 {
-		font-size: 20px;
-		font-size: 2.0rem;
-	}
-
-	h5 {
-		font-size: 19px;
-		font-size: 1.9rem;
-	}
-
-	h6 {
-		font-size: 18px;
-		font-size: 1.8rem;
-	}
-
-	body {
-		font-size: 18px;
-		font-size: 1.8rem;
-	}
 	
-	p, ul, ol {
-		font-size: 18px;
-		font-size: 1.8rem;
-	}
-	
-	.news-box p, .news-box ul {
-		line-height: 105%;
-		font-size: 15px;
-		font-size: 1.5rem;
-	}
-	
-	.sitemap-list li {
+	.slide-nav-link {
+		right: 5px !important;
 		font-size: 18px;
 		font-size: 1.8rem;
 	}
@@ -2248,187 +2203,13 @@ button:focus, button:hover, input[type="button"]:focus, input[type="button"]:hov
 }
 
 
-/* 10.8. Max-width: 460px
---------------------------------------------- */
-
-@media only screen and (max-width: 460px) {
-
-	.entry-title {
-		font-size: 30px;
-		font-size: 3.0rem;
-	}
-	
-	h1 {
-		font-size: 30px;
-		font-size: 3.0rem;
-	}
-
-	h2 {
-		font-size: 27px;
-		font-size: 2.7rem;
-	}
-
-	h3 {
-		font-size: 24px;
-		font-size: 2.4rem;
-	}
-
-	h4 {
-		font-size: 21px;
-		font-size: 2.1rem;
-	}
-
-	h5 {
-		font-size: 19px;
-		font-size: 1.9rem;
-	}
-
-	h6 {
-		font-size: 17px;
-		font-size: 1.7rem;
-	}
-
-	body {
-		font-size: 17px;
-		font-size: 1.7rem;
-	}
-	
-	p, ul, ol {
-		font-size: 17px;
-		font-size: 1.7rem;
-	}
-	
-	.news-box p, .news-box ul {
-		line-height: 105%;
-		font-size: 14px;
-		font-size: 1.4rem;
-	}
-	
-	.sitemap-list li {
-		font-size: 17px;
-		font-size: 1.7rem;
-	}
-}
-
-/* 10.9. Max-width: 400px
+/* 10.6. Max-width: 400px
 --------------------------------------------- */
 
 @media only screen and (max-width: 400px) {
-		.entry-title {
-		font-size: 24px;
-		font-size: 2.4rem;
-	}
 	
-	h1 {
-		font-size: 22px;
-		font-size: 2.2rem;
-	}
-
-	h2 {
-		font-size: 20px;
-		font-size: 2.0rem;
-	}
-
-	h3 {
-		font-size: 19px;
-		font-size: 1.9rem;
-	}
-
-	h4 {
-		font-size: 18px;
-		font-size: 1.8rem;
-	}
-
-	h5 {
-		font-size: 17px;
-		font-size: 1.7rem;
-	}
-
-	h6 {
-		font-size: 16px;
-		font-size: 1.6rem;
-	}
-
-	body {
-		font-size: 15px;
-		font-size: 1.5rem;
-	}
-	
-	p, ul, ol {
-		font-size: 15px;
-		font-size: 1.5rem;
-	}
-	
-	.news-box p, .news-box ul {
-		line-height: 105%;
-		font-size: 15px;
-		font-size: 1.5rem;
-	}
-	
-	.sitemap-list li {
-		font-size: 15px;
-		font-size: 1.5rem;
-	}
-}
-
-/* 10.10. Max-width: 350px
---------------------------------------------- */
-
-@media only screen and (max-width: 350px) {
-		.entry-title {
-		font-size: 22px;
-		font-size: 2.2rem;
-	}
-	
-	h1 {
-		font-size: 20px;
-		font-size: 2.0rem;
-	}
-
-	h2 {
-		font-size: 19px;
-		font-size: 1.9rem;
-	}
-
-	h3 {
-		font-size: 18px;
-		font-size: 1.8rem;
-	}
-
-	h4 {
-		font-size: 17px;
-		font-size: 1.7rem;
-	}
-
-	h5 {
-		font-size: 16px;
-		font-size: 1.6rem;
-	}
-
-	h6 {
-		font-size: 14px;
-		font-size: 1.4rem;
-	}
-
-	body {
-		font-size: 14px;
-		font-size: 1.4rem;
-	}
-	
-	p, ul, ol {
-		font-size: 14px;
-		font-size: 1.4rem;
-	}
-	
-	.news-box p, .news-box ul {
-		line-height: 105%;
-		font-size: 14px;
-		font-size: 1.4rem;
-	}
-	
-	.sitemap-list li {
-		font-size: 14px;
-		font-size: 1.4rem;
+	.title-area {
+		width: 65vw;
 	}
 }
 
