@@ -19,7 +19,6 @@ add_action( 'genesis_entry_content', 'genesis_page_archive_content' );
 add_action( 'genesis_post_content', 'genesis_page_archive_content' );
 
 function genesis_page_archive_content() { ?>
-<h1 class="entry-title" style="margin-top:8px;">Sitemap</h1>
 <div class="archive-page" style="width:100%;">
 	<p>This page provides a list of all core pages hosted on this site. Data portals, mapping applications, and catalog items are not listed here. You can also use the search box below to search for content within pages.</p>
 	<?php

@@ -52,6 +52,7 @@
 	7.3. After Header Navigation
 	7.4. Footer Navigation
 	7.5. SuperSide Me
+	7.6. Entry Content Menu
 8. Content Area
 	8.1. Page Banners
 	8.2. Entries
@@ -73,7 +74,7 @@
 	10.3. Max-width: 1023px
 	10.4. Max-width: 860px
 	10.5. Max-width: 639px
-	10.6. Max-width: 460px
+	10.6. Max-width: 400px
 11. Print Styles
 */
 
@@ -1011,8 +1012,8 @@ img.alignright,
 
 .genesis-nav-menu {
 	clear: both;
-	font-size: 22px;
-	font-size: 2.2rem;
+	font-size: 24px;
+	font-size: 2.4rem;
 	font-weight: 600;
 	font-family: 'Roboto Condensed', sans-serif;
 	line-height: 1;
@@ -1057,8 +1058,8 @@ img.alignright,
 	background-color: #ffffff;
 	border: 1px solid #dddddd;
 	border-top: 0;
-	font-size: 20px;
-	font-size: 2.0rem;
+	font-size: 22px;
+	font-size: 2.2rem;
 	padding: 15px;
 	position: relative;
 	width: 300px;
@@ -1182,10 +1183,18 @@ img.alignright,
 /* 7.6. Entry Content Menu
 --------------------------------------------- */
 
+.menu-border .menu {
+	border-bottom: 1px solid #333333;
+}
+
+.entry-content-menu .widget-title {
+	display: none;
+}
+
 .entry-content-menu .menu {
 	clear: both;
-	font-size: 22px;
-	font-size: 2.2rem;
+	font-size: 20px;
+	font-size: 2.0rem;
 	font-weight: 600;
 	font-family: 'Roboto Condensed', sans-serif;
 	line-height: 1;
@@ -1212,7 +1221,7 @@ img.alignright,
 .entry-content-menu a {
 	color: #333333;
 	display: block;
-	padding: 10px 10px 10px 5px;
+	padding: 15px;
 	text-decoration: none;
 	font-weight: 400;
 	outline: none;
@@ -1234,15 +1243,21 @@ img.alignright,
 	position: absolute;
 	width: 300px;
 	z-index: 99;
+	background-color: #eeeeee;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
 }
 
 .entry-content-menu .sub-menu a {
 	background-color: #ffffff;
 	border: 1px solid #dddddd;
 	border-top: 0;
-	font-size: 20px;
-	font-size: 2.0rem;
-	padding: 15px;
+	font-size: 19px;
+	font-size: 1.9rem;
+	padding: 12px;
 	position: relative;
 	width: 300px;
 	word-wrap: break-word;
@@ -1299,7 +1314,7 @@ img.alignright,
 	width: 100%;
 	overflow-x: hidden;
 	overflow-y: hidden;
-	max-height: 400px;
+	max-height: 300px;
 	border: 1px solid #333333;
 	display: flex;
 	flex-direction: column;
@@ -2012,7 +2027,7 @@ button:focus, button:hover, input[type="button"]:focus, input[type="button"]:hov
 		display: inline;
 	}
 	
-	.entry-content-menu {
+	.entry-content-hide {
 		display: none;
 	}
 
