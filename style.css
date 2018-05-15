@@ -320,6 +320,7 @@ video,
 
 img {
 	height: auto;
+	display: block;
 }
 
 figure {
@@ -1446,6 +1447,14 @@ img.alignright,
 
 .key-pair p {
 	margin: 0 0 10px;
+}
+
+.wp-block-gallery {
+	margin-left: 0 !important;
+}
+
+.blocks-gallery-item figure {
+	border: 1px solid #333333;
 }
 
 /* 8.4. Buttons
