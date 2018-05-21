@@ -192,3 +192,10 @@ add_action( 'wp_enqueue_scripts', 'sp_load_google_fonts' );
 function sp_load_google_fonts() {
 	wp_enqueue_style( 'google-font-opensans', '//fonts.googleapis.com/css?family=Open+Sans|Roboto+Condensed', array(), CHILD_THEME_VERSION );
 }
+//* Add mime types to for xml and zip to allow kml/kmz upload
+function add_upload_mimes($mimes) {
+  $mimes['kml'] = 'application/xml';
+  $mimes['kmz'] = 'application/zip';
+  return $mimes;
+}
+add_filter('upload_mimes', 'add_upload_mimes');

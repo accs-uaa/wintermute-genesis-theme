@@ -1328,28 +1328,6 @@ img.alignright,
 	 width: 100%;
 }
 
-.wp-block-cover-image {
-	height: 300px !important;
-	min-height: 300px !important;
-}
-
-.alignfull {
-	width: 100vw !important;
-	left: 50%;
-	right: 50%;
-	margin-left: -50vw !important;
-	margin-right: -50vw !important;
-	text-align: center;
-	overflow-x: hidden;
-	overflow-y: hidden;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	border-top: 1px solid #333333;
-	border-bottom: 1px solid #333333;
-}
-
 /* 8.2. Entries
 --------------------------------------------- */
 .entry {
@@ -1454,6 +1432,10 @@ img.alignright,
 }
 
 .blocks-gallery-item figure {
+	border: 1px solid #333333;
+}
+
+.wp-block-image {
 	border: 1px solid #333333;
 }
 
@@ -1620,6 +1602,8 @@ img.alignright,
 	text-align: center;
 	font-size: 22px;
 	font-size: 2.2rem;
+	padding-left: 10px;
+	padding-right: 10px;
 }
 
 .logo-thumbnail {
@@ -1653,17 +1637,19 @@ img.alignright,
 
 .portal-button {
 	color: #333333;
-	font-size: 17px;
-	width: 200px;
+	font-size: 18px;
+	font-size: 1.8rem;
+	font-family: 'Arial', sans-serif;
+	font-weight: 600;
+	width: 180px;
 	display: inline-block;
 	vertical-align: top;
 	text-align: center;
-	font-weight: bold;
 	margin: 10px 20px 10px 20px;
 }
 
 .portal-button img {
-	border: 1px solid #000000;
+	margin-bottom: 15px;
 }
 
 .portal-button a {
@@ -1673,6 +1659,10 @@ img.alignright,
 .portal-button a:hover {
 	color: #1e73be;
 	text-decoration: none;
+}
+
+.border img {
+	border: 1px solid #333333;
 }
 
 /* 8.5. Widgets
@@ -2223,6 +2213,10 @@ button:focus, button:hover, input[type="button"]:focus, input[type="button"]:hov
 		width: 300px;
 		margin-left: auto;
 		margin-right: auto;
+	}
+	
+	.portal-button {
+		width: 150px;
 	}
 }
 
