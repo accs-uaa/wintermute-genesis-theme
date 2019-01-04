@@ -1,19 +1,19 @@
 /*
-	Theme Name: Wintermute
-	Description: Child theme for the Genesis Framework and Wordpress 5.0 or greater. Intended to be used with Gutenberg.
-	Author: Timm Nawrocki
+Theme Name: Wintermute
+Theme URI: https://github.com/accs-uaa/wintermute-genesis-theme
+Description: Child theme for the Genesis Framework and Wordpress 5.0 or greater. Intended to be used with Gutenberg.
+Author: Timm Nawrocki
+Author URI: https://github.com/accs-uaa
 	
-	Version: 1.0
-	
-	Template: genesis
-	Template Version: 2.6.1
+Tags: accessibility-ready, custom-colors, custom-logo, custom-menu, featured-images, footer-widgets, full-width-template, left-sidebar, one-column, right-sidebar, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, two-columns
 
-	License: GPL-2.0+
-	License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Template: genesis
 
-	Text Domain: wintermute
+License: GPL-2.0-or-later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+
+Text Domain: wintermute
 */
-
 
 /* # Table of Contents
 1. HTML5 Reset
@@ -29,19 +29,17 @@
 	2.6. Tables
 	2.7. Screen Reader Text
 3. Structure and Layout
-	3.1. Site Containers
-	3.2. Column Widths and Positions
-		3.2.1. Wraps for content and primary sidebar
-		3.2.2. Content
-		3.2.3. Primary Sidebar
-		3.2.4. Secondary Sidebar
-	3.3. Column Classes
+	3.1. Site Container
+	3.2. Site Inner
 4. Common Classes
 	4.1. Avatar
 	4.2. Genesis
 	4.3. Search Form
 	4.4. Titles
 	4.5. WordPress
+5. Widgets
+	5.1. Featured Content
+
 5. Skip Links
 6. Site Header
 	6.1. Title Area
@@ -79,22 +77,22 @@
 */
 
 /* 1. HTML5 Reset
----------------------------------------------------------------------------------------------------- */
+---------------------------------------------------------------------------- */
 
 /* 1.1. Baseline Normalize
 --------------------------------------------- */
-/* normalize.css v4.1.1 | MIT License | http://necolas.github.io/normalize.css/ */
 
-html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}progress{vertical-align:baseline}template,[hidden]{display:none}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit}b,strong{font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:0.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-0.25em}sup{top:-0.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace, monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}button,input,optgroup,select,textarea{font:inherit;margin:0}optgroup{font-weight:bold}button,input{overflow:visible}button,select{text-transform:none}button,html [type="button"],[type="reset"],[type="submit"]{-webkit-appearance:button}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type="button"]:-moz-focusring,[type="reset"]:-moz-focusring,[type="submit"]:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:0.35em 0.625em 0.75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type="checkbox"],[type="radio"]{box-sizing:border-box;padding:0}[type="number"]::-webkit-inner-spin-button,[type="number"]::-webkit-outer-spin-button{height:auto}[type="search"]{-webkit-appearance:textfield;outline-offset:-2px}[type="search"]::-webkit-search-cancel-button,[type="search"]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:0.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}
+/* normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css
+---------------------------------------------------------------------------- */
+/* stylelint-disable */
+html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}main{display:block}h1{font-size:2em;margin:.67em 0}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details{display:block}summary{display:list-item}[hidden],template{display:none}
+/* stylelint-enable */
 
 /* 1.2. Box Sizing
 --------------------------------------------- */
 
-html,
-input[type="search"] {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing:    border-box;
-	box-sizing:         border-box;
+html {
+	box-sizing: border-box;
 }
 
 *,
@@ -102,7 +100,6 @@ input[type="search"] {
 *::after {
 	box-sizing: inherit;
 }
-
 
 /* 1.3. Float Clearing
 --------------------------------------------- */
@@ -146,38 +143,28 @@ input[type="search"] {
 
 
 /* 2. Defaults
----------------------------------------------------------------------------------------------------- */
+---------------------------------------------------------------------------- */
 
 /* 2.1. Typographical Elements
 --------------------------------------------- */
 
 html {
-	font-size: 62.5%; /* 10px browser default */
-}
-
-/* Chrome fix */
-body > div {
-	font-size: 17px;
-	font-size: 1.7rem;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
 }
 
 body {
-	color: #111111;
+	background-color: #fff;
+	color: #111;
 	font-family: 'Open Sans', sans-serif;
 	font-size: 17px;
-	font-size: 1.7rem;
-	-webkit-font-smoothing: antialiased;
 	font-weight: 400;
-	line-height: 1.4;
+	line-height: 1.625;
 	margin: 0;
+	overflow-x: hidden;
+	overflow-y: scroll !important;
 }
 
-p, ul, ol {
-	font-size: 17px;
-	font-size: 1.7rem;
-}
-
-a,
 button,
 input:focus,
 input[type="button"],
@@ -186,22 +173,19 @@ input[type="submit"],
 textarea:focus,
 .button,
 .gallery img {
-	-webkit-transition: all 0.1s ease-in-out;
-	-moz-transition:    all 0.1s ease-in-out;
-	-ms-transition:     all 0.1s ease-in-out;
-	-o-transition:      all 0.1s ease-in-out;
-	transition:         all 0.1s ease-in-out;
+	transition: all 0.2s ease-in-out;
 }
 
 a {
 	color: #337ab7;
 	text-decoration: none;
+	transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
 	outline: none;
 }
 
 a:focus,
 a:hover {
-	text-decoration: underline;
+	text-decoration: none;
 }
 
 p {
@@ -220,11 +204,11 @@ li {
 }
 
 hr {
-	border: 0;
+	border: none;
 	border-collapse: collapse;
 	border-top: 1px solid #eee;
 	clear: both;
-	margin: 1em 0;
+	margin: 30px 0;
 }
 
 b,
@@ -245,20 +229,8 @@ mark {
 }
 
 blockquote {
-	margin: 40px;
+	margin: 30px;
 }
-
-blockquote::before {
-	content: "\201C";
-	display: block;
-	font-size: 30px;
-	font-size: 3rem;
-	height: 0;
-	left: -20px;
-	position: relative;
-	top: -10px;
-}
-
 
 /* 2.2. Headings
 --------------------------------------------- */
@@ -277,32 +249,30 @@ h6 {
 
 h1 {
 	font-size: 36px;
-	font-size: 3.6rem;
 }
 
 h2 {
 	font-size: 32px;
-	font-size: 3.2rem;
 }
 
 h3 {
 	font-size: 28px;
-	font-size: 2.8rem;
 }
 
 h4 {
 	font-size: 24px;
-	font-size: 2.4rem;
 }
 
 h5 {
 	font-size: 20px;
-	font-size: 2.0rem;
 }
 
 h6 {
 	font-size: 18px;
-	font-size: 1.8rem;
+}
+
+.entry-title {
+	text-align: center;
 }
 
 /* 2.3. Objects
@@ -320,7 +290,7 @@ video,
 
 img {
 	height: auto;
-	display: block;
+	vertical-align: top;
 }
 
 figure {
@@ -334,10 +304,16 @@ figure {
 	overflow: hidden;
 }
 
-.gallery-item {
-	float: left;
-	margin: 0 0 28px;
-	text-align: center;
+.gallery img {
+	border: 1px solid #eee;
+	height: auto;
+	padding: 4px;
+}
+
+.gallery img:focus,
+.gallery img:hover {
+	border: 1px solid #999;
+	outline: none;
 }
 
 .gallery-columns-1 .gallery-item {
@@ -387,15 +363,10 @@ figure {
 	clear: left;
 }
 
-.gallery img {
-	border: 1px solid #eee;
-	height: auto;
-	padding: 4px;
-}
-
-.gallery img:focus,
-.gallery img:hover {
-	border: 1px solid #999;
+.gallery-item {
+	float: left;
+	margin: 0 0 30px;
+	text-align: center;
 }
 
 /* 2.5. Forms
@@ -408,7 +379,6 @@ textarea {
 	border: 1px solid #ddd;
 	color: #333;
 	font-size: 18px;
-	font-size: 1.8rem;
 	font-weight: 400;
 	padding: 5px;
 	width: 100%;
@@ -426,13 +396,19 @@ input[type="radio"] {
 	width: auto;
 }
 
-::-moz-placeholder {
+::-ms-input-placeholder {
 	color: #333;
 	opacity: 1;
 }
 
-::-webkit-input-placeholder {
+:-ms-input-placeholder {
 	color: #333;
+	opacity: 1;
+}
+
+::placeholder {
+	color: #333;
+	opacity: 1;
 }
 
 button,
@@ -440,14 +416,14 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"],
 .button {
-	background-color: #dddddd;
+	background-color: #ddd;
 	border: 0;
 	color: #fff;
 	cursor: pointer;
 	font-size: 16px;
-	font-size: 1.6rem;
-	font-weight: 700;
+	font-weight: 600;
 	padding: 16px 24px;
+	text-align: center;
 	text-decoration: none;
 	white-space: normal;
 	width: auto;
@@ -474,14 +450,6 @@ input[type="submit"]:hover,
 
 .button {
 	display: inline-block;
-}
-
-a.button.small,
-button.small,
-input[type="button"].small,
-input[type="reset"].small,
-input[type="submit"].small {
-	padding: 8px 16px;
 }
 
 .site-container button:disabled,
@@ -513,6 +481,7 @@ table {
 	border-spacing: 0;
 	margin-bottom: 40px;
 	width: 100%;
+	word-break: break-all;
 }
 
 tbody {
@@ -556,15 +525,14 @@ th:first-child {
 
 .screen-reader-text:focus,
 .screen-reader-shortcut:focus,
-.genesis-nav-menu .search input[type="submit"]:focus,
 .widget_search input[type="submit"]:focus {
 	background: #fff;
-	box-shadow: 0 0 2px 2px rgba(0,0,0,.6);
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
 	clip: auto !important;
 	color: #333;
 	display: block;
 	font-size: 1em;
-	font-weight: bold;
+	font-weight: 700;
 	height: auto;
 	padding: 15px 23px 14px;
 	text-decoration: none;
@@ -573,14 +541,36 @@ th:first-child {
 }
 
 .more-link {
+	display: inline-block;
 	position: relative;
+	margin-bottom: 30px;
 }
 
 
 /* 3. Structure and Layout
----------------------------------------------------------------------------------------------------- */
+---------------------------------------------------------------------------- */
 
-/* 3.1. Site Containers
+/* 3.1. Site Container
+--------------------------------------------- */
+
+.site-container {
+	animation: fadein 1s;
+	word-wrap: break-word;
+}
+
+@keyframes fadein {
+
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+
+}
+
+/* 3.2. Site Inner
 --------------------------------------------- */
 
 .site-inner,
@@ -591,134 +581,13 @@ th:first-child {
 
 .site-inner {
 	clear: both;
-	word-wrap: break-word;
-}
-
-/* 3.2. Column Widths and Positions
---------------------------------------------- */
-
-/* 3.2.1. Wraps for content and primary sidebar */
-
-.content-sidebar-sidebar .content-sidebar-wrap,
-.sidebar-content-sidebar .content-sidebar-wrap,
-.sidebar-sidebar-content .content-sidebar-wrap {
-	width: 1060px;
-}
-
-.content-sidebar-sidebar .content-sidebar-wrap {
-	float: left;
-}
-
-.sidebar-content-sidebar .content-sidebar-wrap,
-.sidebar-sidebar-content .content-sidebar-wrap {
-	float: right;
-}
-
-/* 3.2.2. Content */
-
-.content {
-	float: right;
-	width: 880px;
-}
-
-.content-sidebar .content,
-.content-sidebar-sidebar .content,
-.sidebar-content-sidebar .content {
-	float: left;
-}
-
-.content-sidebar-sidebar .content,
-.sidebar-content-sidebar .content,
-.sidebar-sidebar-content .content {
-	width: 660px;
-}
-
-.full-width-content .content {
-	width: 100%;
-}
-
-/* 3.2.3. Primary Sidebar */
-
-.sidebar-primary {
-	float: right;
-	width: 360px;
-}
-
-.sidebar-content .sidebar-primary,
-.sidebar-sidebar-content .sidebar-primary {
-	float: left;
-}
-
-/* 3.2.4. Secondary Sidebar */
-
-.sidebar-secondary {
-	float: left;
-	width: 180px;
-}
-
-.content-sidebar-sidebar .sidebar-secondary {
-	float: right;
-}
-
-/* 3.3. Column Classes
---------------------------------------------- */
-/* Link: http://twitter.github.io/bootstrap/assets/css/bootstrap-responsive.css */
-
-.five-sixths,
-.four-sixths,
-.one-fourth,
-.one-half,
-.one-sixth,
-.one-third,
-.three-fourths,
-.three-sixths,
-.two-fourths,
-.two-sixths,
-.two-thirds {
-	float: left;
-	margin-left: 2.564102564102564%;
-}
-
-.one-half,
-.three-sixths,
-.two-fourths {
-	width: 48.717948717948715%;
-}
-
-.one-third,
-.two-sixths {
-	width: 31.623931623931625%;
-}
-
-.four-sixths,
-.two-thirds {
-	width: 65.81196581196582%;
-}
-
-.one-fourth {
-	width: 23.076923076923077%;
-}
-
-.three-fourths {
-	width: 74.35897435897436%;
-}
-
-.one-sixth {
-	width: 14.52991452991453%;
-}
-
-.five-sixths {
-	width: 82.90598290598291%;
-}
-
-.first {
-	clear: both;
-	margin-left: 0;
+	margin: 0 auto;
+	padding: 0;
 }
 
 
 /* 4. Common Classes
----------------------------------------------------------------------------------------------------- */
+---------------------------------------------------------------------------- */
 
 /* 4.1. Avatar
 --------------------------------------------- */
@@ -730,36 +599,40 @@ th:first-child {
 
 .author-box .avatar,
 .alignleft .avatar {
-	margin-right: 24px;
+	margin-right: 20px;
 }
 
 .alignright .avatar {
-	margin-left: 24px;
+	margin-left: 20px;
 }
 
 .comment .avatar {
-	margin: 0 16px 24px 0;
+	margin: 0 15px 20px 0;
 }
 
 /* 4.2. Genesis
 --------------------------------------------- */
 
-.breadcrumb {
-	background-color: #fff;
-	font-size: 16px;
-	font-size: 1.6rem;
-	margin-bottom: 1px;
-	padding: 12px 30px;
-}
-
 .after-entry,
 .archive-description,
 .author-box {
-	background-color: #fff;
-	font-size: 18px;
-	font-size: 1.8rem;
 	margin-bottom: 40px;
-	padding: 60px;
+}
+
+.after-entry {
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+	padding: 20px 30px;
+}
+
+.after-entry .widget:last-of-type {
+	margin-bottom: 0;
+}
+
+.breadcrumb {
+	border-bottom: 1px solid #eee;
+	font-size: 16px;
+	margin-bottom: 40px;
+	padding-bottom: 10px;
 }
 
 .archive-description p:last-child,
@@ -774,15 +647,9 @@ th:first-child {
 	overflow: hidden;
 }
 
-.entry-content .search-form,
-.site-header .search-form {
+.entry-content .search-form {
 	margin-bottom: 40px;
 	width: 50%;
-}
-
-.site-header .search-form {
-	float: right;
-	margin: 12px auto 0;
 }
 
 .post-password-form input[type="submit"],
@@ -790,7 +657,6 @@ th:first-child {
 	margin-top: 10px;
 }
 
-.genesis-nav-menu .search input[type="submit"],
 .widget_search input[type="submit"] {
 	border: 0;
 	clip: rect(0, 0, 0, 0);
@@ -808,13 +674,14 @@ th:first-child {
 .archive-title,
 .author-box-title {
 	font-size: 20px;
-	font-size: 2rem;
+	font-weight: 600;
+	margin-bottom: 10px;
 }
 
 .entry-title {
 	font-size: 36px;
-	font-size: 3.6rem;
-	text-align: center;
+	margin-bottom: 10px;
+	margin-top: 20px;
 }
 
 .entry-title a,
@@ -830,7 +697,7 @@ th:first-child {
 
 .widget-title {
 	font-size: 18px;
-	font-size: 1.8rem;
+	font-weight: 600;
 	margin-bottom: 20px;
 }
 
@@ -865,30 +732,29 @@ a.alignright {
 img.centered,
 .aligncenter {
 	display: block;
-	margin: 0 auto 24px;
+	margin: 0 auto 30px;
 }
 
 img.alignnone,
 .alignnone {
-	margin-bottom: 12px;
+	margin-bottom: 15px;
 }
 
 a.alignleft,
 img.alignleft,
 .wp-caption.alignleft {
-	margin: 0 24px 24px 0;
+	margin: 0 20px 20px 0;
 }
 
 a.alignright,
 img.alignright,
 .wp-caption.alignright {
-	margin: 0 0 24px 24px;
+	margin: 0 0 20px 20px;
 }
 
 .gallery-caption,
 .wp-caption-text {
 	font-size: 14px;
-	font-size: 1.4rem;
 	font-weight: 600;
 	margin: 0;
 	text-align: center;
@@ -901,14 +767,82 @@ img.alignright,
 .entry-content .wp-audio-shortcode,
 .entry-content .wp-playlist,
 .entry-content .wp-video {
-	margin: 0 0 28px;
+	margin: 0 0 30px;
 }
 
-/* 5. Skip Links
----------------------------------------------------------------------------------------------------- */
+/* 5. Widgets
+---------------------------------------------------------------------------- */
+
+.widget {
+	margin-bottom: 10px;
+	word-wrap: break-word;
+}
+
+.widget p:last-child,
+.widget ul > li:last-of-type {
+	margin-bottom: 0;
+}
+
+.widget ul > li {
+	margin-bottom: 10px;
+	padding-bottom: 10px;
+}
+
+.widget ul > li:last-of-type {
+	padding-bottom: 0;
+}
+
+.widget ol > li {
+	list-style-position: inside;
+	list-style-type: decimal;
+	padding-left: 20px;
+	text-indent: -20px;
+}
+
+.widget li li {
+	border: 0;
+	margin: 0 0 0 30px;
+	padding: 0;
+}
+
+.widget_calendar table {
+	width: 100%;
+}
+
+.widget_calendar td,
+.widget_calendar th {
+	text-align: center;
+}
+
+/* 5.1. Featured Content
+--------------------------------------------- */
+
+.featured-content .entry {
+	border-bottom: 1px solid #eee;
+	margin-bottom: 20px;
+}
+
+.featured-content .entry:last-of-type {
+	border-bottom: none;
+	margin-bottom: 0;
+}
+
+.featured-content .entry-title {
+	font-size: 16px;
+	margin-bottom: 5px;
+	margin-top: 10px;
+}
+
+/* 6. Skip Links
+---------------------------------------------------------------------------- */
 
 .genesis-skip-link {
 	margin: 0;
+}
+
+.genesis-skip-link .skip-link-hidden {
+	display: none;
+	visibility: hidden;
 }
 
 .genesis-skip-link li {
@@ -923,11 +857,12 @@ img.alignright,
 	outline: #ccc solid 1px;
 }
 
-/* 6. Site Header
----------------------------------------------------------------------------------------------------- */
+
+/* 7. Site Header
+---------------------------------------------------------------------------- */
 
 .site-header {
-	background-color: #ffffff;
+	background-color: #fff;
 	border-bottom: 1px solid #333333;
 	position: relative;
 }
@@ -948,22 +883,21 @@ img.alignright,
 	width: 70vw;
 }
 
-.header-image .title-area {
+.wp-custom-logo .title-area {
 	margin: 0 auto;
 	max-width: 438px;
 	padding: 0;
 }
 
-.header-full-width .title-area {
-	float: none;
-	width: 100%;
+.wp-custom-logo .title-area img {
+	width: auto;
 }
 
 .site-title {
 	font-size: 30px;
-	font-size: 3rem;
-	font-weight: 700;
+	font-weight: 600;
 	line-height: 1.2;
+	margin-bottom: 0;
 }
 
 .site-title a,
@@ -973,30 +907,15 @@ img.alignright,
 	text-decoration: none;
 }
 
-.header-image .site-title > a {
-	background-position: center !important;
-	background-size: contain !important;
-	float: left;
-	min-height: 100px;
-	width: 100%;
-}
-
-.site-description {
-	font-size: 16px;
-	font-size: 1.6rem;
-	font-weight: 400;
-	line-height: 1.5;
-}
-
 .site-description,
-.site-title {
-	margin-bottom: 0;
-}
-
-.header-image .site-description,
-.header-image .site-title {
-	display: block;
-	text-indent: -9999px;
+.wp-custom-logo .site-title {
+	border: 0;
+	clip: rect(0, 0, 0, 0);
+	height: 1px;
+	overflow: hidden;
+	position: absolute !important;
+	width: 1px;
+	word-wrap: normal !important;
 }
 
 /* 6.2. Widget Area
@@ -1006,15 +925,19 @@ img.alignright,
 	float: right;
 	text-align: right;
 	width: 600px;
+	margin-top: 10px;
 }
 
-/* 7. Genesis Nav Menu
----------------------------------------------------------------------------------------------------- */
+.site-header .widget-area .widget {
+	margin-bottom: 0;
+}
+
+/* 7. Site Navigation
+---------------------------------------------------------------------------- */
 
 .genesis-nav-menu {
 	clear: both;
-	font-size: 24px;
-	font-size: 2.4rem;
+	font-size: 22px;
 	font-weight: 600;
 	font-family: 'Roboto Condensed', sans-serif;
 	line-height: 1;
@@ -1047,7 +970,7 @@ img.alignright,
 }
 
 .genesis-nav-menu .sub-menu {
-	border-top: 1px solid #dddddd;
+	border-top: 1px solid #333;
 	left: -9999px;
 	opacity: 0;
 	position: absolute;
@@ -1056,12 +979,11 @@ img.alignright,
 }
 
 .genesis-nav-menu .sub-menu a {
-	background-color: #ffffff;
-	border: 1px solid #dddddd;
+	background-color: #fff;
+	border: 1px solid #666;
 	border-top: 0;
-	font-size: 22px;
-	font-size: 2.2rem;
-	padding: 15px;
+	font-size: 20px;
+	padding: 10px;
 	position: relative;
 	width: 300px;
 	word-wrap: break-word;
@@ -1118,13 +1040,17 @@ img.alignright,
 	margin-left: 0;
 }
 
+.nav-header {
+	margin-top: 16px;
+}
+
 /* 7.3. After Header Navigation
 --------------------------------------------- */
 
-.nav-primary {
-	background-color: #fff;
-	border-bottom: 1px solid #333333;
-	display: none;
+.menu-primary {
+	border-top: 1px solid #333;
+	text-align: center;
+	font-size: 20px;
 }
 
 /* 7.4. Footer Navigation
@@ -1148,7 +1074,6 @@ img.alignright,
 	left: unset !important;
 	top: 37px;
 	font-size: 20px;
-	font-size: 2.0rem;
 }
 
 .ssme-search, .slide-nav-link, .button.ssme-button.ssme-custom {
@@ -1195,7 +1120,6 @@ img.alignright,
 .entry-content-menu .menu {
 	clear: both;
 	font-size: 20px;
-	font-size: 2.0rem;
 	font-weight: 600;
 	font-family: 'Roboto Condensed', sans-serif;
 	line-height: 1;
@@ -1257,7 +1181,6 @@ img.alignright,
 	border: 1px solid #dddddd;
 	border-top: 0;
 	font-size: 19px;
-	font-size: 1.9rem;
 	padding: 12px;
 	position: relative;
 	width: 300px;
@@ -1290,7 +1213,7 @@ img.alignright,
 }
 
 /* 8. Content Area
----------------------------------------------------------------------------------------------------- */
+---------------------------------------------------------------------------- */
 
 /* 8.1. Page Banners
 --------------------------------------------- */
@@ -1328,18 +1251,17 @@ img.alignright,
 	 width: 100%;
 }
 
-/* 8.2. Entries
+/* 8.2. Entry Content
 --------------------------------------------- */
+
 .entry {
-	background-color: #fff;
-	padding-top: 20px;
-	padding-bottom: 20px;
+	margin-bottom: 40px;
 }
 
 .entry-content ol,
 .entry-content ul {
-	margin-bottom: 28px;
-	margin-left: 40px;
+	margin-bottom: 30px;
+	padding-left: 40px;
 }
 
 .entry-content ol > li {
@@ -1352,22 +1274,31 @@ img.alignright,
 	padding-bottom: 15px;
 }
 
+.entry-content ol ul > li,
+.entry-content ul ul > li {
+	list-style-type: circle;
+}
+
 .entry-content ol ol,
 .entry-content ul ul {
 	margin-bottom: 0;
 }
 
 .entry-content code {
-	background-color: #333;
-	color: #eee;
+	background-color: #f5f5f5;
+}
+
+.content .sticky {
+	background-color: #f5f5f5;
+	padding: 30px;
 }
 
 /* 8.3. Page Content
 --------------------------------------------- */
 
 .mission {
-	font-size: 28px;
-	font-size:2.8rem;
+	font-size: 24px;
+	margin-top: 20px;
 }
 
 
@@ -1417,26 +1348,6 @@ img.alignright,
 	margin: 10px 1% 10px 0px;
 	text-align: center;
 	vertical-align: top;
-}
-
-.key-pair {
-	padding-top: 30px;
-}
-
-.key-pair p {
-	margin: 0 0 10px;
-}
-
-.wp-block-gallery {
-	margin-left: 0 !important;
-}
-
-.blocks-gallery-item figure {
-	border: 1px solid #333333;
-}
-
-.wp-block-image {
-	border: 1px solid #333333;
 }
 
 /* 8.4. Buttons
@@ -1601,7 +1512,6 @@ img.alignright,
 .picture-button p {
 	text-align: center;
 	font-size: 22px;
-	font-size: 2.2rem;
 	padding-left: 10px;
 	padding-right: 10px;
 }
@@ -1609,7 +1519,6 @@ img.alignright,
 .logo-thumbnail {
 	color: #333333;
 	font-size: 15px;
-	font-size: 1.5rem;
 	width: 150px;
 	display: inline-block;
 	vertical-align: bottom;
@@ -1638,7 +1547,6 @@ img.alignright,
 .portal-button {
 	color: #333333;
 	font-size: 18px;
-	font-size: 1.8rem;
 	font-family: 'Arial', sans-serif;
 	font-weight: 600;
 	width: 180px;
@@ -1665,149 +1573,25 @@ img.alignright,
 	border: 1px solid #333333;
 }
 
-/* 8.5. Widgets
+/* 8.5. Widget Content
 --------------------------------------------- */
+ 
 
-.widget {
-	margin-bottom: 10px;
-	word-wrap: break-word;
-}
-
-.widget p:last-child,
-.widget ul > li:last-of-type,
-.widget-area .widget:last-of-type {
-	margin-bottom: 0;
-}
-
-.widget ul > li {
-	margin-bottom: 10px;
-	padding-bottom: 10px;
-}
-
-.widget ul > li:last-of-type {
-	padding-bottom: 0;
-}
-
-.widget ol > li {
-	list-style-position: inside;
-	list-style-type: decimal;
-	padding-left: 20px;
-	text-indent: -20px;
-}
-
-.widget li li {
-	border: 0;
-	margin: 0 0 0 30px;
-	padding: 0;
-}
-
-.widget_calendar table {
-	width: 100%;
-}
-
-.widget_calendar td,
-.widget_calendar th {
-	text-align: center;
-}
-
-/* 8.6. Sidebars
---------------------------------------------- */
-
-.sidebar {
-	font-size: 16px;
-	font-size: 1.6rem;
-	margin-bottom: 40px;
-}
-
-.sidebar .widget {
-	background-color: #fff;
-	padding: 40px;
-}
-
-/* 8.7. Site Footer
---------------------------------------------- */
-
-.site-footer {
-	background-color: #fff;
-	border-top: 1px solid #333333;
-	font-size: 17px;
-	font-size: 1.7rem;
-	line-height: 1.4;
-	padding: 60px 0;
-	text-align: center;
-}
-
-.site-footer p {
-	margin-bottom: 20px;
-	text-align: left;
-}
-
-/* 8.8. Footer Widgets
---------------------------------------------- */
-
-.footer-widgets {
-	background-color: #fff;
-	clear: both;
-	font-size: 18px;
-	font-size: 1.8rem;
-	padding: 60px 0;
-}
-
-.footer-widgets-1,
-.footer-widgets-2,
-.footer-widgets-3 {
-	width: 380px;
-}
-
-.footer-widgets-1 {
-	margin-right: 70px;
-}
-
-.footer-widgets-1,
-.footer-widgets-2 {
-	float: left;
-}
-
-.footer-widgets-3 {
-	float: right;
-}
-
-/* 9. Miscellaneous
----------------------------------------------------------------------------------------------------- */
-
-/* 9.1. Featured Content
---------------------------------------------- */
-
-.featured-content .entry {
-	background: none;
-	padding: 0;
-}
-
-.featured-content .entry:last-of-type {
-	margin-bottom: 0;
-}
-
-.featured-content .entry-title {
-	font-size: 20px;
-	font-size: 2rem;
-}
-
-/* 9.2. Entry Meta
+/* 8.5. Entry Meta
 --------------------------------------------- */
 
 p.entry-meta {
 	font-size: 16px;
-	font-size: 1.6rem;
 	margin-bottom: 0;
 }
 
 .entry-header .entry-meta {
-	margin-bottom: 24px;
+	margin-bottom: 20px;
 }
 
 .entry-footer .entry-meta {
 	border-top: 1px solid #eee;
-	padding-top: 24px;
+	padding-top: 20px;
 }
 
 .entry-categories,
@@ -1820,12 +1604,12 @@ p.entry-meta {
 	margin: 0 6px 0 2px;
 }
 
-/* 9.3. Pagination
+/* 8.6. Pagination
 --------------------------------------------- */
 
 .pagination {
 	clear: both;
-	margin: 40px 0;
+	margin: 60px 0;
 }
 
 .adjacent-entry-pagination {
@@ -1836,44 +1620,32 @@ p.entry-meta {
 	display: inline;
 }
 
-.archive-pagination a {
-	background-color: #fff;
+.archive-pagination li a {
+	background-color: #f5f5f5;
 	color: #333;
 	cursor: pointer;
 	display: inline-block;
 	font-size: 16px;
-	font-size: 1.6rem;
 	font-weight: 600;
+	margin-bottom: 4px;
 	padding: 8px 12px;
 	text-decoration: none;
 }
 
-.archive-pagination a:focus,
-.archive-pagination a:hover,
-.archive-pagination .active a {
-	background-color: #c3251d;
+.archive-pagination li a:focus,
+.archive-pagination li a:hover,
+.archive-pagination li.active a {
+	background-color: #333;
 	color: #fff;
 }
 
-/* 9.4. Comments
+/* 8.7. Entry Comments
 --------------------------------------------- */
 
 .comment-respond,
 .entry-comments,
 .entry-pings {
-	background-color: #fff;
-	font-size: 16px;
-	font-size: 1.6rem;
 	margin-bottom: 40px;
-}
-
-.comment-respond,
-.entry-pings {
-	padding: 60px 60px 32px;
-}
-
-.entry-comments {
-	padding: 60px;
 }
 
 .comment-list li {
@@ -1915,28 +1687,74 @@ p.entry-meta {
 	display: none;
 }
 
-/* 9.5. Login
---------------------------------------------- */
+.comment-form-cookies-consent label {
+	display: inline;
+	padding-left: 10px;
+}
 
-.tml {
+/* 8.9. Sidebar
+---------------------------------------------------------------------------- */
+
+.sidebar {
+	font-size: 16px;
+	line-height: 1.5;
+}
+
+.sidebar .widget {
+	margin-bottom: 40px;
+}
+
+.sidebar p {
+	margin-bottom: 20px;
+}
+
+/* 8.10. Footer Widgets
+---------------------------------------------------------------------------- */
+
+.footer-widgets {
+	border-top: 1px solid #eee;
+	background-color: #fff;
+	clear: both;
+	padding: 60px 0;
+}
+
+.footer-widgets .wrap {
 	margin-left: auto;
 	margin-right: auto;
-	position: relative;
-	top: 110px;
-	margin-bottom: 200px;
 }
 
-button, input[type="button"], input[type="reset"], input[type="submit"], .button {
-	display: inline-block;
-	color: #111111;
+.footer-widget-area {
+	margin-bottom: 40px;
+	padding-left: 30px;
+	padding-right: 30px;
 }
 
-button:focus, button:hover, input[type="button"]:focus, input[type="button"]:hover, input[type="reset"]:focus, input[type="reset"]:hover, input[type="submit"]:focus, input[type="submit"]:hover, .button:focus, .button:hover {
-	color: #111111;
+.footer-widget-area:last-child,
+.footer-widgets .widget:last-child {
+	margin-bottom: 0;
 }
+
+
+/* 8.11. Site Footer
+---------------------------------------------------------------------------- */
+
+.site-footer {
+	background-color: #fff;
+	border-top: 1px solid #333;
+	font-size: 17px;
+	line-height: 1.4;
+	padding: 60px 0;
+	text-align: center;
+}
+
+.site-footer p {
+	margin-bottom: 20px;
+	text-align:left;
+}
+
 
 /* 10. Media Queries
----------------------------------------------------------------------------------------------------- */
+---------------------------------------------------------------------------- */
 
 /* 10.1. Max-width: 1320px
 --------------------------------------------- */
@@ -1969,57 +1787,42 @@ button:focus, button:hover, input[type="button"]:focus, input[type="button"]:hov
 	
 	.entry-title {
 		font-size: 34px;
-		font-size: 3.4rem;
 	}
 	
 	.mission {
 		font-size: 26px;
-		font-size: 2.6rem;
 	}
 	
 	h1 {
 		font-size: 34px;
-		font-size: 3.4rem;
 	}
 
 	h2 {
 		font-size: 30px;
-		font-size: 3.0rem;
 	}
 
 	h3 {
 		font-size: 26px;
-		font-size: 2.6rem;
 	}
 
 	h4 {
 		font-size: 22px;
-		font-size: 2.2rem;
 	}
 
 	h5 {
 		font-size: 19px;
-		font-size: 1.9rem;
 	}
 
 	h6 {
 		font-size: 17px;
-		font-size: 1.7rem;
 	}
 	
 	body {
 		font-size: 16px;
-		font-size: 1.6rem;
-	}
-	
-	p, ul, ol {
-		font-size: 16px;
-		font-size: 1.6rem;
 	}
 	
 	.site-footer {
 		font-size: 16px;
-		font-size: 1.6rem;
 	}
 	
 	.nav-primary {
@@ -2039,57 +1842,42 @@ button:focus, button:hover, input[type="button"]:focus, input[type="button"]:hov
 	
 	.entry-title {
 		font-size: 32px;
-		font-size: 3.2rem;
 	}
 	
 	.mission {
 		font-size: 24px;
-		font-size: 2.4rem;
 	}
 	
 	h1 {
 		font-size: 32px;
-		font-size: 3.2rem;
 	}
 
 	h2 {
 		font-size: 28px;
-		font-size: 2.8rem;
 	}
 
 	h3 {
 		font-size: 24px;
-		font-size: 2.4rem;
 	}
 
 	h4 {
 		font-size: 20px;
-		font-size: 2.0rem;
 	}
 
 	h5 {
 		font-size: 18px;
-		font-size: 1.8rem;
 	}
 
 	h6 {
 		font-size: 16px;
-		font-size: 1.6rem;
 	}
 
 	body {
 		font-size: 15px;
-		font-size: 1.5rem;
-	}
-	
-	p, ul, ol {
-		font-size: 15px;
-		font-size: 1.5rem;
 	}
 	
 	.site-footer {
 		font-size: 15px;
-		font-size: 1.5rem;
 	}
 }
 
@@ -2101,7 +1889,6 @@ button:focus, button:hover, input[type="button"]:focus, input[type="button"]:hov
 	body,
 	body > div {
 		font-size: 14px;
-		font-size: 1.4rem;
 	}
 
 	.after-entry,
@@ -2147,42 +1934,34 @@ button:focus, button:hover, input[type="button"]:focus, input[type="button"]:hov
 	
 	.entry-title {
 		font-size: 30px;
-		font-size: 3.0rem;
 	}
 	
 	.mission {
 		font-size: 22px;
-		font-size: 2.2rem;
 	}
 	
 	h1 {
 		font-size: 30px;
-		font-size: 3.0rem;
 	}
 
 	h2 {
 		font-size: 26px;
-		font-size: 2.6rem;
 	}
 
 	h3 {
 		font-size: 22px;
-		font-size: 2.2rem;
 	}
 
 	h4 {
 		font-size: 19px;
-		font-size: 1.9rem;
 	}
 
 	h5 {
 		font-size: 17px;
-		font-size: 1.7rem;
 	}
 
 	h6 {
 		font-size: 15px;
-		font-size: 1.5rem;
 	}
 
 }
@@ -2206,7 +1985,6 @@ button:focus, button:hover, input[type="button"]:focus, input[type="button"]:hov
 	.slide-nav-link {
 		right: 5px !important;
 		font-size: 18px;
-		font-size: 1.8rem;
 	}
 	
 	.two-item-button {
@@ -2232,7 +2010,7 @@ button:focus, button:hover, input[type="button"]:focus, input[type="button"]:hov
 }
 
 /* 11. Print Styles
----------------------------------------------------------------------------------------------------- */
+---------------------------------------------------------------------------- */
 
 @media print {
 
@@ -2241,7 +2019,7 @@ button:focus, button:hover, input[type="button"]:focus, input[type="button"]:hov
 	*::after {
 		background: transparent !important;
 		box-shadow: none !important;
-		color: #000 !important;
+		color: #333 !important;
 		text-shadow: none !important;
 	}
 
@@ -2336,7 +2114,6 @@ button:focus, button:hover, input[type="button"]:focus, input[type="button"]:hov
 	.site-inner {
 		padding-top: 0;
 		position: relative;
-		top: -100px;
 	}
 
 	.author-box {
