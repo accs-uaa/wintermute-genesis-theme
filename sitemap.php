@@ -21,11 +21,8 @@ add_action( 'genesis_post_content', 'genesis_page_archive_content' );
 
 function genesis_page_archive_content() { ?>
 <div class="archive-page" style="width:100%;">
-	<p>This page provides a list of all core pages hosted on this site. Data portals, mapping applications, catalog items, and links to external resources are not listed here. You can also use the search box below to search for content within pages.</p>
-	<?php
-		get_search_form();
-	?>
-	<h3 style="margin-top:20px;"><?php _e( 'Pages:', 'genesis' ); ?></h3>
+	<p>This page provides a list of all core pages hosted on this site. Data portals, mapping applications, catalog items, and links to external resources are not listed here. You can also use the search box in the page header to search for content within pages.</p>
+	<h2 style="margin-top:20px;"><?php _e( 'Pages:', 'genesis' ); ?></h2>
 	<ul class="sitemap-list">
 		<?php wp_list_pages( 'title_li=' ); ?>
 	</ul>
