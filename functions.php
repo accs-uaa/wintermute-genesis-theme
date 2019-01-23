@@ -7,14 +7,15 @@
  * @package Wintermute
  * @author  Timm Nawrocki
  * @license GPL-2.0+
+ * @link    https://github.com/accs-uaa/wintermute-genesis-theme
  */
 
 // Starts the engine.
 require_once get_template_directory() . '/lib/init.php';
 
 // Defines the child theme (do not remove).
-define( 'CHILD_THEME_NAME', 'Wintermute' );
-define( 'CHILD_THEME_URL', 'https://github.com/accs-uaa' );
+define( 'CHILD_THEME_NAME', 'Genesis Sample' );
+define( 'CHILD_THEME_URL', 'https://www.studiopress.com/' );
 define( 'CHILD_THEME_VERSION', '2.7.1' );
 
 // Sets up the Theme.
@@ -332,18 +333,6 @@ function prefix_remove_entry_header()
 	remove_action( 'genesis_entry_header', 'genesis_do_post_format_image', 4 );
 }
 
-//* Add custom footer
-remove_action( 'genesis_footer', 'genesis_do_footer' );
-add_action( 'genesis_footer', 'sp_custom_footer' );
-function sp_custom_footer() {
-	?>
-	<div class="site-footer-inner">
-		<p>&copy; 2019 <a href="http://accs.uaa.alaska.edu">Alaska Center for Conservation Science</a>.This website was designed and is maintained by the University of Alaska Anchorage-<a href="https://accs.uaa.alaska.edu">Alaska Center for Conservation Science</a> (UAA-ACCS). The University of Alaska Anchorage is accredited by the Northwest Commission on Colleges and Universities. UA is an AA/EO employer and educational institution and prohibits illegal discrimination against any individual: <a title="UA non-discrimination policy" href="http://www.alaska.edu/nondiscrimination">UA Non-discrimination Policy</a>.</p>
-		<p><a href="mailto:twnawrocki@alaska.edu">Contact Website Administrator</a> | <a href="/sitemap/">Sitemap</a></p>
-	</div>
-	<?php
-}
-
 //* Enqueue Open Sans Google font
 add_action( 'wp_enqueue_scripts', 'sp_load_google_fonts' );
 function sp_load_google_fonts() {
@@ -379,4 +368,18 @@ function cc_hide_admin_bar() {
   if (!current_user_can('edit_posts')) {
     show_admin_bar(false);
   }
+}
+
+//* Enqueue theme responsive menu scripts conditionally (prevents multiple responsive menus when superside me is active)
+add_action( 'wp_enqueue_scripts', 'prefix_load_scripts' );
+function prefix_load_scripts() {
+    if ( function_exists( 'supersideme_has_content' ) && supersideme_has_content() ) {
+        return;
+    }
+    wp_enqueue_script( 'leaven-responsive-menu', get_stylesheet_directory_uri() . '/js/responsive-menu.js', array( 'jquery' ), '1.0.0', true );
+    $output = array(
+        'mainMenu' => 'Menu',
+        'subMenu'  => 'Menu',
+    );
+    wp_localize_script( 'leaven-responsive-menu', 'LeavenL10n', $output );
 }

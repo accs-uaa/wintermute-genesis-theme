@@ -9,6 +9,7 @@
  * @package Wintermute
  * @author  Timm Nawrocki
  * @license GPL-2.0+
+ * @link    https://github.com/accs-uaa/wintermute-genesis-theme
  */
 
 //* Remove default loop

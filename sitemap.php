@@ -9,6 +9,7 @@
  * @package Wintermute
  * @author  Timm Nawrocki
  * @license GPL-2.0+
+ * @link    https://github.com/accs-uaa/wintermute-genesis-theme
  */
 
 //* Remove standard post content output
@@ -20,7 +21,7 @@ add_action( 'genesis_post_content', 'genesis_page_archive_content' );
 
 function genesis_page_archive_content() { ?>
 <div class="archive-page" style="width:100%;">
-	<p>This page provides a list of all core pages hosted on this site. Data portals, mapping applications, and catalog items are not listed here. You can also use the search box below to search for content within pages.</p>
+	<p>This page provides a list of all core pages hosted on this site. Data portals, mapping applications, catalog items, and links to external resources are not listed here. You can also use the search box below to search for content within pages.</p>
 	<?php
 		get_search_form();
 	?>

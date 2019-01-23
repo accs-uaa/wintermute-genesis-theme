@@ -15,6 +15,7 @@ License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: wintermute
 */
 
+
 /* # Table of Contents
 1. HTML5 Reset
 	1.1. Baseline Normalize
@@ -39,33 +40,26 @@ Text Domain: wintermute
 	4.5. WordPress
 5. Widgets
 	5.1. Featured Content
-
-5. Skip Links
-6. Site Header
-	6.1. Title Area
-	6.2. Widget Area
-7. Site Navigation
-	7.1. Accessible Menu
-	7.2. Site Header Navigation
-	7.3. After Header Navigation
-	7.4. Footer Navigation
-	7.5. SuperSide Me
-	7.6. Entry Content Menu
-8. Content Area
-	8.1. Page Banners
-	8.2. Entries
-	8.3. Page Content
-	8.4. Buttons
-	8.5. Widgets
-	8.6. Sidebars
-	8.7. Site Footer
-	8.8. Footer Widgets
-9. Miscellaneous
-	9.1. Featured Content
-	9.2. Entry Meta
-	9.3. Pagination
-	9.4. Comments
-	9.5. Login
+6. Skip Links
+7. Site Header
+	7.1. Title Area
+	7.2. Widget Area
+8. Site Navigation
+	8.1. Accessible Menu
+	8.2. Site Header Navigation
+	8.3. After Header Navigation
+	8.4. Footer Navigation
+	8.5. SuperSide Me
+	8.6. Entry Content Menu
+9. Content Area
+	9.1. Page Banners
+	9.2. Entries
+	9.3. Page Content
+	9.4. Buttons
+	9.5. Widgets
+	9.6. Sidebars
+	9.7. Site Footer
+	9.8. Footer Widgets
 10. Media Queries
 	10.1. Max-width: 1320px
 	10.2. Max-width: 1172px
@@ -75,6 +69,7 @@ Text Domain: wintermute
 	10.6. Max-width: 400px
 11. Print Styles
 */
+
 
 /* 1. HTML5 Reset
 ---------------------------------------------------------------------------- */
@@ -141,7 +136,6 @@ html {
 	display: table;
 }
 
-
 /* 2. Defaults
 ---------------------------------------------------------------------------- */
 
@@ -156,13 +150,12 @@ html {
 body {
 	background-color: #fff;
 	color: #111;
-	font-family: 'Open Sans', sans-serif;
-	font-size: 17px;
+	font-family: "Open Sans", sans-serif;
+	font-size: 16px;
 	font-weight: 400;
 	line-height: 1.625;
 	margin: 0;
 	overflow-x: hidden;
-	overflow-y: scroll !important;
 }
 
 button,
@@ -177,19 +170,19 @@ textarea:focus,
 }
 
 a {
-	color: #337ab7;
-	text-decoration: none;
+	color: #0073e5;
+	text-decoration: underline;
 	transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
-	outline: none;
 }
 
 a:focus,
 a:hover {
+	color: #333;
 	text-decoration: none;
 }
 
 p {
-	margin: 0 0 20px;
+	margin: 0 0 30px;
 	padding: 0;
 }
 
@@ -225,7 +218,7 @@ i {
 
 mark {
 	background: #ddd;
-	color: #000;
+	color: #333;
 }
 
 blockquote {
@@ -241,22 +234,22 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: "Roboto Condensed", sans-serif;
 	font-weight: 400;
 	line-height: 1.2;
 	margin: 0 0 10px;
 }
 
 h1 {
-	font-size: 36px;
-}
-
-h2 {
 	font-size: 32px;
 }
 
-h3 {
+h2 {
 	font-size: 28px;
+}
+
+h3 {
+	font-size: 26px;
 }
 
 h4 {
@@ -264,15 +257,11 @@ h4 {
 }
 
 h5 {
-	font-size: 20px;
+	font-size: 22px;
 }
 
 h6 {
-	font-size: 18px;
-}
-
-.entry-title {
-	text-align: center;
+	font-size: 20px;
 }
 
 /* 2.3. Objects
@@ -380,7 +369,7 @@ textarea {
 	color: #333;
 	font-size: 18px;
 	font-weight: 400;
-	padding: 5px;
+	padding: 10px;
 	width: 100%;
 }
 
@@ -416,13 +405,13 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"],
 .button {
-	background-color: #ddd;
+	background-color: #333;
 	border: 0;
 	color: #fff;
 	cursor: pointer;
 	font-size: 16px;
 	font-weight: 600;
-	padding: 16px 24px;
+	padding: 15px 30px;
 	text-align: center;
 	text-decoration: none;
 	white-space: normal;
@@ -439,7 +428,7 @@ input[type="submit"]:focus,
 input[type="submit"]:hover,
 .button:focus,
 .button:hover {
-	background-color: #c3251d;
+	background-color: #0073e5;
 	color: #fff;
 }
 
@@ -479,6 +468,7 @@ input[type="search"]::-webkit-search-results-button {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+	line-height: 2;
 	margin-bottom: 40px;
 	width: 100%;
 	word-break: break-all;
@@ -573,18 +563,11 @@ th:first-child {
 /* 3.2. Site Inner
 --------------------------------------------- */
 
-.site-inner,
-.wrap {
-	margin: 0 auto;
-	width: 1200px;
-}
-
 .site-inner {
 	clear: both;
 	margin: 0 auto;
-	padding: 0;
+	width: 1200px;
 }
-
 
 /* 4. Common Classes
 ---------------------------------------------------------------------------- */
@@ -679,9 +662,9 @@ th:first-child {
 }
 
 .entry-title {
-	font-size: 36px;
 	margin-bottom: 10px;
 	margin-top: 20px;
+	text-align: center;
 }
 
 .entry-title a,
@@ -692,7 +675,7 @@ th:first-child {
 
 .entry-title a:focus,
 .entry-title a:hover {
-	color: #c3251d;
+	color: #0073e5;
 }
 
 .widget-title {
@@ -864,7 +847,6 @@ img.alignright,
 .site-header {
 	background-color: #fff;
 	border-bottom: 1px solid #333333;
-	position: relative;
 }
 
 .site-header > .wrap {
@@ -873,7 +855,7 @@ img.alignright,
 	padding: 0;
 }
 
-/* 6.1. Title Area
+/* 7.1. Title Area
 --------------------------------------------- */
 
 .title-area {
@@ -884,7 +866,8 @@ img.alignright,
 }
 
 .wp-custom-logo .title-area {
-	margin: 0 auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
 	max-width: 438px;
 	padding: 0;
 }
@@ -918,21 +901,21 @@ img.alignright,
 	word-wrap: normal !important;
 }
 
-/* 6.2. Widget Area
+/* 7.2. Widget Area
 --------------------------------------------- */
 
 .site-header .widget-area {
 	float: right;
 	text-align: right;
-	width: 600px;
-	margin-top: 10px;
+	width: 590px;
+	margin-top: 20px;
 }
 
 .site-header .widget-area .widget {
 	margin-bottom: 0;
 }
 
-/* 7. Site Navigation
+/* 8. Site Navigation
 ---------------------------------------------------------------------------- */
 
 .genesis-nav-menu {
@@ -1014,7 +997,7 @@ img.alignright,
 	float: right;
 }
 
-/* 7.1. Accessible Menu
+/* 8.1. Accessible Menu
 --------------------------------------------- */
 
 .menu .menu-item:focus {
@@ -1068,16 +1051,12 @@ img.alignright,
 --------------------------------------------- */
 
 .slide-nav-link {
-	width: 110px !important;
-	text-align: center;
-	right: 5vw !important;
-	left: unset !important;
-	top: 37px;
 	font-size: 20px;
 }
 
 .ssme-search, .slide-nav-link, .button.ssme-button.ssme-custom {
-	padding: 0 !important;
+	padding: 10px !important;
+	border-bottom: 1px solid #333 !important;
 }
 
 .slide-nav-link:hover, .slide-nav-link:focus, .slide-nav-link:active, .slide-nav-link:visited {
@@ -1093,9 +1072,10 @@ img.alignright,
 }
 
 .sidr {
-	overflow-y: scroll;
+	overflow-y: scroll !important;
 	border-left: 1px solid #333333;
 	border-right: 1px solid #333333;
+	z-index:99999 !important;
 }
 
 .slide-nav-link:before, .search-me:before, .menu-close:before, .sidr .sub-menu-toggle:before, .ssme-search:before, .ssme-button:before {
@@ -1212,10 +1192,10 @@ img.alignright,
 	float: right;
 }
 
-/* 8. Content Area
+/* 9. Content Area
 ---------------------------------------------------------------------------- */
 
-/* 8.1. Page Banners
+/* 9.1. Page Banners
 --------------------------------------------- */
 
 .banner-header {
@@ -1251,7 +1231,7 @@ img.alignright,
 	 width: 100%;
 }
 
-/* 8.2. Entry Content
+/* 9.2. Entry Content
 --------------------------------------------- */
 
 .entry {
@@ -1266,12 +1246,10 @@ img.alignright,
 
 .entry-content ol > li {
 	list-style-type: decimal;
-	padding-bottom: 15px;
 }
 
 .entry-content ul > li {
 	list-style-type: disc;
-	padding-bottom: 15px;
 }
 
 .entry-content ol ul > li,
@@ -1293,7 +1271,7 @@ img.alignright,
 	padding: 30px;
 }
 
-/* 8.3. Page Content
+/* 9.3. Page Content
 --------------------------------------------- */
 
 .mission {
@@ -1350,8 +1328,19 @@ img.alignright,
 	vertical-align: top;
 }
 
-/* 8.4. Buttons
+.wp-block-cover {
+	min-height: 600px !important;
+}
+
+/* 9.4. Buttons
 --------------------------------------------- */
+
+.content .wp-block-button .wp-block-button__link {
+	font-size: 18px !important;
+	font-family: "Open Sans", sans-serif !important;
+	padding: 10px 20px !important;
+	font-weight: 400 !important;
+}
 
 .button-primary {
 	background: #2a80b5;
@@ -1424,15 +1413,15 @@ img.alignright,
 	margin-bottom: -10px;
 }
 
-.picture-text-button a:hover {
+.picture-text-button a {
 	text-decoration: none;
 }
 
-.picture-text-button h4 {
+.picture-text-button h5 {
 	color: #000000;
 }
 
-.picture-text-button:hover h4 {
+.picture-text-button:hover h5 {
 	color: #337ab7;
 }
 
@@ -1573,11 +1562,22 @@ img.alignright,
 	border: 1px solid #333333;
 }
 
-/* 8.5. Widget Content
+/* 9.5. Calendar
 --------------------------------------------- */
- 
 
-/* 8.5. Entry Meta
+.simcal-default-calendar-list {
+	padding: 0 !important;
+}
+
+.simcal-default-calendar-list dt.simcal-day-label {
+	font-size: 100% !important;
+}
+
+.simcal-default-calendar-list .simcal-event-details {
+	font-size: 100% !important;
+}
+
+/* 9.6. Entry Meta
 --------------------------------------------- */
 
 p.entry-meta {
@@ -1604,7 +1604,7 @@ p.entry-meta {
 	margin: 0 6px 0 2px;
 }
 
-/* 8.6. Pagination
+/* 9.7. Pagination
 --------------------------------------------- */
 
 .pagination {
@@ -1639,7 +1639,7 @@ p.entry-meta {
 	color: #fff;
 }
 
-/* 8.7. Entry Comments
+/* 9.8. Entry Comments
 --------------------------------------------- */
 
 .comment-respond,
@@ -1692,8 +1692,8 @@ p.entry-meta {
 	padding-left: 10px;
 }
 
-/* 8.9. Sidebar
----------------------------------------------------------------------------- */
+/* 9.9. Sidebar
+--------------------------------------------- */
 
 .sidebar {
 	font-size: 16px;
@@ -1708,8 +1708,8 @@ p.entry-meta {
 	margin-bottom: 20px;
 }
 
-/* 8.10. Footer Widgets
----------------------------------------------------------------------------- */
+/* 9.10. Footer Widgets
+--------------------------------------------- */
 
 .footer-widgets {
 	border-top: 1px solid #eee;
@@ -1735,21 +1735,20 @@ p.entry-meta {
 }
 
 
-/* 8.11. Site Footer
----------------------------------------------------------------------------- */
+/* 9.11. Site Footer
+--------------------------------------------- */
 
 .site-footer {
 	background-color: #fff;
-	border-top: 1px solid #333;
-	font-size: 17px;
-	line-height: 1.4;
-	padding: 60px 0;
+	border-top: 1px solid #eee;
+	font-size: 15px;
+	line-height: 1.5;
+	padding: 30px;
 	text-align: center;
 }
 
 .site-footer p {
-	margin-bottom: 20px;
-	text-align:left;
+	margin-bottom: 0;
 }
 
 
@@ -1781,48 +1780,54 @@ p.entry-meta {
 
 @media only screen and (max-width: 1172px) {
 
+	.wp-custom-logo .title-area {
+		margin-top: 5px;
+		margin-bottom: 5px;
+	}
+	
 	.site-header .widget-area {
 		display: none;
 	}
 	
 	.entry-title {
-		font-size: 34px;
+		margin-top: 10px;
 	}
 	
 	.mission {
-		font-size: 26px;
+		font-size: 22px;
+		margin-top: 10px;
 	}
 	
 	h1 {
-		font-size: 34px;
-	}
-
-	h2 {
 		font-size: 30px;
 	}
 
+	h2 {
+		font-size: 27px;
+	}
+
 	h3 {
-		font-size: 26px;
+		font-size: 25px;
 	}
 
 	h4 {
-		font-size: 22px;
+		font-size: 23px;
 	}
 
 	h5 {
-		font-size: 19px;
+		font-size: 21px;
 	}
 
 	h6 {
-		font-size: 17px;
+		font-size: 19px;
 	}
 	
 	body {
-		font-size: 16px;
+		font-size: 15px;
 	}
 	
 	.site-footer {
-		font-size: 16px;
+		font-size: 15px;
 	}
 	
 	.nav-primary {
@@ -1835,61 +1840,10 @@ p.entry-meta {
 
 }
 
-/* 10.3. Max-width: 1023px
---------------------------------------------- */
-
-@media only screen and (max-width: 1023px) {
-	
-	.entry-title {
-		font-size: 32px;
-	}
-	
-	.mission {
-		font-size: 24px;
-	}
-	
-	h1 {
-		font-size: 32px;
-	}
-
-	h2 {
-		font-size: 28px;
-	}
-
-	h3 {
-		font-size: 24px;
-	}
-
-	h4 {
-		font-size: 20px;
-	}
-
-	h5 {
-		font-size: 18px;
-	}
-
-	h6 {
-		font-size: 16px;
-	}
-
-	body {
-		font-size: 15px;
-	}
-	
-	.site-footer {
-		font-size: 15px;
-	}
-}
-
 /* 10.4. Max-width: 860px
 --------------------------------------------- */
 
 @media only screen and (max-width: 860px) {
-
-	body,
-	body > div {
-		font-size: 14px;
-	}
 
 	.after-entry,
 	.archive-description,
@@ -1932,16 +1886,12 @@ p.entry-meta {
 		width: 100%;
 	}
 	
-	.entry-title {
-		font-size: 30px;
-	}
-	
 	.mission {
-		font-size: 22px;
+		font-size: 20px;
 	}
 	
 	h1 {
-		font-size: 30px;
+		font-size: 28px;
 	}
 
 	h2 {
@@ -1949,19 +1899,19 @@ p.entry-meta {
 	}
 
 	h3 {
-		font-size: 22px;
+		font-size: 24px;
 	}
 
 	h4 {
-		font-size: 19px;
+		font-size: 22px;
 	}
 
 	h5 {
-		font-size: 17px;
+		font-size: 20px;
 	}
 
 	h6 {
-		font-size: 15px;
+		font-size: 18px;
 	}
 
 }

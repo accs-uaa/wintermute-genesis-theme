@@ -3,25 +3,26 @@ A child theme for the Genesis Framework and Wordpress 5.0 or greater.
 
 ## Getting Started
 
-These instructions will enable you to deploy the child theme on an existing or new wordpress installation. If you deploy this theme on existing wordpress installation, then all content may require updating as this theme moves from the classic editor of the Wordpress 4 series to the Gutenberg editor of the Wordpress 5 series.
+These instructions will enable you to deploy the child theme on an existing or new wordpress installation. If you deploy this theme on existing wordpress installation, then all content may require updating as this theme moves from the classic editor of the Wordpress 4 series to the block editor of the Wordpress 5 series.
 
 ### Prerequisites
 Required:
-1. Wordpress 5.0 or greater OR Wordpress 4.9.4+ and Gutenberg Plugin.
-2. Genesis 2.6.1. or greater
-2. Superside Me
+1. Wordpress 5.0+
+2. Genesis 2.8.0+
+3. Superside Me
+4. Blox
+5. WP Media Folder
 
 Recommended:
-1. Google Analytics
-2. Google XML Sitemaps
-3. Responsive Lightbox
-4. Sucuri
-5. Use Google Libraries
-6. User Role Editor
-7. WP Rocket
-8. wpDataTables (or Tablepress)
-9. Conditional Menus
-10. Theme My Login
+1. Conditional Menus
+2. Genesis Simple Edits
+3. Google XML Sitemaps
+4. Gravity Forms
+5. Tablepress OR wpDataTables (NOT both)
+6. Use Google Libraries
+7. User Role Editor
+8. Wordfence Security
+9. WP Rocket
 
 ### Installing
 
