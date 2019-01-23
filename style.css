@@ -935,7 +935,7 @@ img.alignright,
 }
 
 .genesis-nav-menu a {
-	color: #333333;
+	color: #111;
 	display: block;
 	padding: 10px 10px 10px 5px;
 	text-decoration: none;
@@ -944,12 +944,15 @@ img.alignright,
 }
 
 .genesis-nav-menu a:focus,
-.genesis-nav-menu a:hover,
 .genesis-nav-menu .current-menu-item > a,
-.genesis-nav-menu .sub-menu .current-menu-item > a:focus,
-.genesis-nav-menu .sub-menu .current-menu-item > a:hover  {
-	color: #1e73be;
+.genesis-nav-menu .sub-menu .current-menu-item > a:focus {
+	color: #111 !important;
 	text-decoration: none;
+}
+
+.genesis-nav-menu a:hover,
+.genesis-nav-menu .sub-menu .current-menu-item > a:hover {
+	color: #1e73be !important;
 }
 
 .genesis-nav-menu .sub-menu {
@@ -1060,8 +1063,8 @@ img.alignright,
 }
 
 .slide-nav-link:hover, .slide-nav-link:focus, .slide-nav-link:active, .slide-nav-link:visited {
-	background-color: #ffffff !important;
-	color: #111111 !important;
+	background-color: #fff !important;
+	color: #111 !important;
 }
 
 .sidr .widget {
@@ -1073,8 +1076,8 @@ img.alignright,
 
 .sidr {
 	overflow-y: scroll !important;
-	border-left: 1px solid #333333;
-	border-right: 1px solid #333333;
+	border-left: 1px solid #333;
+	border-right: 1px solid #333;
 	z-index:99999 !important;
 }
 
@@ -1090,7 +1093,7 @@ img.alignright,
 --------------------------------------------- */
 
 .menu-border .menu {
-	border-bottom: 1px solid #333333;
+	border-bottom: 1px solid #333;
 }
 
 .entry-content-menu .widget-title {
@@ -1124,7 +1127,7 @@ img.alignright,
 }
 
 .entry-content-menu a {
-	color: #333333;
+	color: #111;
 	display: block;
 	padding: 15px;
 	text-decoration: none;
@@ -1133,12 +1136,15 @@ img.alignright,
 }
 
 .entry-content-menu a:focus,
-.entry-content-menu a:hover,
 .entry-content-menu .current-menu-item > a,
-.entry-content-menu .sub-menu .current-menu-item > a:focus,
-.entry-content-menu .sub-menu .current-menu-item > a:hover  {
-	color: #1e73be;
+.entry-content-menu .sub-menu .current-menu-item > a:focus {
+	color: #111 !important;
 	text-decoration: none;
+}
+
+.entry-content-menu a:hover,
+.entry-content-menu .sub-menu .current-menu-item > a:hover {
+	color: #1e73be !important;
 }
 
 .entry-content-menu .sub-menu {
