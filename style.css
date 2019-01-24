@@ -1338,6 +1338,12 @@ img.alignright,
 	min-height: 600px !important;
 }
 
+.portrait-small {
+	float: left;
+	border: 1px solid #333;
+	margin-right: 15px !important;
+}
+
 /* 9.4. Buttons
 --------------------------------------------- */
 
@@ -1753,6 +1759,11 @@ p.entry-meta {
 	text-align: center;
 }
 
+.site-footer > .wrap {
+	width: 1200px;
+	margin: auto;
+}
+
 .site-footer p {
 	margin-bottom: 0;
 }
@@ -1774,6 +1785,12 @@ p.entry-meta {
 	}
 	
 	.site-header > .wrap {
+		width: 100%;
+		padding-left: 5vw;
+		padding-right: 5vw;
+	}
+	
+	.site-footer > .wrap {
 		width: 100%;
 		padding-left: 5vw;
 		padding-right: 5vw;
@@ -1938,6 +1955,11 @@ p.entry-meta {
 		padding-right: 5px;
 	}
 	
+	.site-footer > .wrap {
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+	
 	.slide-nav-link {
 		right: 5px !important;
 		font-size: 18px;
@@ -1952,6 +1974,13 @@ p.entry-meta {
 	.portal-button {
 		width: 150px;
 	}
+	
+	.portrait-small {
+	float: none;
+	border: 1px solid #333;
+	margin-right: 0px;
+	margin: auto;
+}
 }
 
 
