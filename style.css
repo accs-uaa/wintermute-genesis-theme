@@ -80,7 +80,7 @@ Text Domain: wintermute
 /* normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css
 ---------------------------------------------------------------------------- */
 /* stylelint-disable */
-html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}main{display:block}h1{font-size:2em;margin:.67em 0}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details{display:block}summary{display:list-item}[hidden],template{display:none}
+html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}main{display:block}h1{font-size:2em;margin:.67em 0}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:0}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details{display:block}summary{display:list-item}[hidden],template{display:none}
 /* stylelint-enable */
 
 /* 1.2. Box Sizing
@@ -151,7 +151,7 @@ body {
 	background-color: #fff;
 	color: #111;
 	font-family: "Open Sans", sans-serif;
-	font-size: 16px;
+	font-size: 15px;
 	font-weight: 400;
 	line-height: 1.625;
 	margin: 0;
@@ -170,19 +170,20 @@ textarea:focus,
 }
 
 a {
-	color: #0073e5;
+	color: #1e73be;
 	text-decoration: underline;
 	transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
 }
 
 a:focus,
 a:hover {
-	color: #333;
+	color: #111;
 	text-decoration: none;
+	outline: 0;
 }
 
 p {
-	margin: 0 0 30px;
+	margin: 0 0 20px;
 	padding: 0;
 }
 
@@ -241,27 +242,27 @@ h6 {
 }
 
 h1 {
-	font-size: 32px;
+	font-size: 30px;
 }
 
 h2 {
-	font-size: 28px;
-}
-
-h3 {
 	font-size: 26px;
 }
 
-h4 {
+h3 {
 	font-size: 24px;
 }
 
-h5 {
+h4 {
 	font-size: 22px;
 }
 
-h6 {
+h5 {
 	font-size: 20px;
+}
+
+h6 {
+	font-size: 18px;
 }
 
 /* 2.3. Objects
@@ -369,7 +370,7 @@ textarea {
 	color: #333;
 	font-size: 18px;
 	font-weight: 400;
-	padding: 10px;
+	padding: 5px;
 	width: 100%;
 }
 
@@ -411,7 +412,7 @@ input[type="submit"],
 	cursor: pointer;
 	font-size: 16px;
 	font-weight: 600;
-	padding: 15px 30px;
+	padding: 10px 20px;
 	text-align: center;
 	text-decoration: none;
 	white-space: normal;
@@ -566,7 +567,7 @@ th:first-child {
 .site-inner {
 	clear: both;
 	margin: 0 auto;
-	width: 1200px;
+	width: 1100px;
 }
 
 /* 4. Common Classes
@@ -669,13 +670,13 @@ th:first-child {
 
 .entry-title a,
 .sidebar .widget-title a {
-	color: #333;
+	color: #111;
 	text-decoration: none;
 }
 
 .entry-title a:focus,
 .entry-title a:hover {
-	color: #0073e5;
+	color: #1e73be;
 }
 
 .widget-title {
@@ -837,7 +838,7 @@ img.alignright,
 /* Display outline on focus */
 :focus {
 	color: #333;
-	outline: #ccc solid 1px;
+	outline: 0;
 }
 
 
@@ -850,7 +851,7 @@ img.alignright,
 }
 
 .site-header > .wrap {
-	width: 1200px;
+	width: 1100px;
 	margin: auto;
 	padding: 0;
 }
@@ -861,19 +862,20 @@ img.alignright,
 .title-area {
 	float: left;
 	padding: 10px 0;
-	max-width: 438px;
+	max-width: 350px;
 	width: 70vw;
 }
 
 .wp-custom-logo .title-area {
 	margin-top: 10px;
 	margin-bottom: 10px;
-	max-width: 438px;
+	max-width: 390px;
 	padding: 0;
 }
 
 .wp-custom-logo .title-area img {
-	width: auto;
+	max-width: 390px;
+	width: 90vw;
 }
 
 .site-title {
@@ -886,7 +888,7 @@ img.alignright,
 .site-title a,
 .site-title a:focus,
 .site-title a:hover {
-	color: #333;
+	color: #111;
 	text-decoration: none;
 }
 
@@ -907,7 +909,7 @@ img.alignright,
 .site-header .widget-area {
 	float: right;
 	text-align: right;
-	width: 590px;
+	width: 490px;
 	margin-top: 20px;
 }
 
@@ -920,7 +922,7 @@ img.alignright,
 
 .genesis-nav-menu {
 	clear: both;
-	font-size: 22px;
+	font-size: 20px;
 	font-weight: 600;
 	font-family: 'Roboto Condensed', sans-serif;
 	line-height: 1;
@@ -968,7 +970,7 @@ img.alignright,
 	background-color: #fff;
 	border: 1px solid #666;
 	border-top: 0;
-	font-size: 20px;
+	font-size: 18px;
 	padding: 10px;
 	position: relative;
 	width: 300px;
@@ -1036,7 +1038,7 @@ img.alignright,
 .menu-primary {
 	border-top: 1px solid #333;
 	text-align: center;
-	font-size: 20px;
+	font-size: 18px;
 }
 
 /* 7.4. Footer Navigation
@@ -1089,7 +1091,12 @@ img.alignright,
 	outline: none !important;
 }
 
-/* 7.6. Entry Content Menu
+.search-me .search-form input[type="search"] {
+	padding: 10px 50px 10px 12px !important;
+	font-size: 16px !important;
+}
+
+/* 7.6. Entry Content Menu [DEPRECATED]
 --------------------------------------------- */
 
 .menu-border .menu {
@@ -1102,7 +1109,7 @@ img.alignright,
 
 .entry-content-menu .menu {
 	clear: both;
-	font-size: 20px;
+	font-size: 18px;
 	font-weight: 600;
 	font-family: 'Roboto Condensed', sans-serif;
 	line-height: 1;
@@ -1281,7 +1288,7 @@ img.alignright,
 --------------------------------------------- */
 
 .mission {
-	font-size: 24px;
+	font-size: 22px;
 	margin-top: 20px;
 }
 
@@ -1368,7 +1375,7 @@ img.alignright,
 	margin-bottom: 10px;
 	margin-left: 20px;
 	margin-right: 20px;
-	width: 250px;
+	width: 230px;
 	text-align: center;
 	-webkit-transition: all 0.5s ease-in-out;
 	-moz-transition: all 0.5s ease-in-out;
@@ -1391,27 +1398,27 @@ img.alignright,
 }
 
 .picture-text-button h5 {
-	color: #000000;
+	color: #000;
 }
 
 .picture-text-button:hover h5 {
-	color: #337ab7;
+	color: #1e73be;
 }
 
 .picture-text-button p {
-	color: #000000;
+	color: #000;
 }
 
 .picture-text-button:hover p {
-	color: #000000;
+	color: #000;
 }
 
 .picture-text-button span {
-	color: #000000;
+	color: #000;
 }
 
 .picture-text-button:hover span {
-	color: #337ab7;
+	color: #1e73be;
 	text-decoration: underline;
 }
 
@@ -1419,7 +1426,7 @@ img.alignright,
 	position: relative;
 	flex: 1;
 	margin: 10px;
-	border: 1px solid #999999;
+	border: 1px solid #999;
 	max-width: 250px;
 	width: 250px;
 	min-width: 250px;
@@ -1435,9 +1442,9 @@ img.alignright,
 }
 
 .picture-button:hover {
-	-webkit-box-shadow: 3px 3px 5px #666666;
-	-moz-box-shadow: 3px 3px 5px #666666;
-	box-shadow: 3px 3px 5px #666666;
+	-webkit-box-shadow: 3px 3px 5px #666;
+	-moz-box-shadow: 3px 3px 5px #666;
+	box-shadow: 3px 3px 5px #666;
 }
 
 .picture-button a {
@@ -1450,7 +1457,7 @@ img.alignright,
 }
 
 .picture-button a:hover {
-	color: #ffffff;
+	color: #fff;
 	text-decoration: none;
 }
 
@@ -1477,7 +1484,7 @@ img.alignright,
 
 .picture-button p {
 	text-align: center;
-	font-size: 22px;
+	font-size: 20px;
 	padding-left: 10px;
 	padding-right: 10px;
 }
@@ -1488,7 +1495,6 @@ img.alignright,
 
 .logo-thumbnail {
 	color: #333333;
-	font-size: 15px;
 	width: 150px;
 	display: inline-block;
 	vertical-align: bottom;
@@ -1503,11 +1509,11 @@ img.alignright,
 }
 
 .logo-thumbnail:hover {
-	text-shadow: 1px 1px 2px #999999;
+	text-shadow: 1px 1px 1px #ccc;
 }
 
 .logo-thumbnail a {
-	color: #333333 !important;
+	color: #333 !important;
 }
 
 .logo-thumbnail a:hover {
@@ -1515,7 +1521,7 @@ img.alignright,
 }
 
 .portal-button {
-	color: #333333;
+	color: #333;
 	font-size: 18px;
 	font-family: 'Arial', sans-serif;
 	font-weight: 600;
@@ -1722,14 +1728,13 @@ p.entry-meta {
 .site-footer {
 	background-color: #fff;
 	border-top: 1px solid #eee;
-	font-size: 15px;
 	line-height: 1.5;
-	padding: 30px;
-	text-align: center;
+	padding-top: 30px;
+	padding-bottom: 30px;
 }
 
 .site-footer > .wrap {
-	width: 1200px;
+	width: 1100px;
 	margin: auto;
 }
 
@@ -1741,28 +1746,28 @@ p.entry-meta {
 /* 10. Media Queries
 ---------------------------------------------------------------------------- */
 
-/* 10.1. Max-width: 1320px
+/* 10.1. Max-width: 1350px
 --------------------------------------------- */
 
-@media only screen and (max-width: 1320px) {
+@media only screen and (max-width: 1350px) {
 
 	.site-inner,
 	.wrap {
 		width: 100%;
-		padding-left: 5vw;
-		padding-right: 5vw;
+		padding-left: 10vw;
+		padding-right: 10vw;
 	}
 	
 	.site-header > .wrap {
 		width: 100%;
-		padding-left: 5vw;
-		padding-right: 5vw;
+		padding-left: 10vw;
+		padding-right: 10vw;
 	}
 	
 	.site-footer > .wrap {
 		width: 100%;
-		padding-left: 5vw;
-		padding-right: 5vw;
+		padding-left: 10vw;
+		padding-right: 10vw;
 	}
 
 }
@@ -1785,43 +1790,6 @@ p.entry-meta {
 		margin-top: 10px;
 	}
 	
-	.mission {
-		font-size: 22px;
-		margin-top: 10px;
-	}
-	
-	h1 {
-		font-size: 30px;
-	}
-
-	h2 {
-		font-size: 27px;
-	}
-
-	h3 {
-		font-size: 25px;
-	}
-
-	h4 {
-		font-size: 23px;
-	}
-
-	h5 {
-		font-size: 21px;
-	}
-
-	h6 {
-		font-size: 19px;
-	}
-	
-	body {
-		font-size: 15px;
-	}
-	
-	.site-footer {
-		font-size: 15px;
-	}
-	
 	.nav-primary {
 		display: inline;
 	}
@@ -1836,20 +1804,6 @@ p.entry-meta {
 --------------------------------------------- */
 
 @media only screen and (max-width: 860px) {
-
-	.after-entry,
-	.archive-description,
-	.author-box,
-	.comment-respond,
-	.entry,
-	.entry-comments,
-	.entry-pings,
-	.sidebar .widget {
-		padding-top: 30px;
-		padding-right: 10px;
-		padding-left: 10px;
-		margin-bottom: 5%;
-	}
 
 	.sidebar {
 		margin-bottom: 5%;
@@ -1882,28 +1836,11 @@ p.entry-meta {
 		font-size: 20px;
 	}
 	
-	h1 {
-		font-size: 28px;
-	}
-
-	h2 {
-		font-size: 26px;
-	}
-
-	h3 {
-		font-size: 24px;
-	}
-
-	h4 {
-		font-size: 22px;
-	}
-
-	h5 {
-		font-size: 20px;
-	}
-
-	h6 {
-		font-size: 18px;
+	.portrait-small {
+		float: none;
+		border: 1px solid #fff;
+		margin-right: 0px;
+		margin: auto;
 	}
 
 }
@@ -1915,18 +1852,18 @@ p.entry-meta {
 
 	.site-inner,
 	.wrap {
-		padding-left: 5px;
-		padding-right: 5px;
+		padding-left: 5vw;
+		padding-right: 5vw;
 	}
 	
 	.site-header > .wrap {
-		padding-left: 5px;
-		padding-right: 5px;
+		padding-left: 5vw;
+		padding-right: 5vw;
 	}
 	
 	.site-footer > .wrap {
-		padding-left: 5px;
-		padding-right: 5px;
+		padding-left: 5vw;
+		padding-right: 5vw;
 	}
 	
 	.slide-nav-link {
@@ -1944,12 +1881,6 @@ p.entry-meta {
 		width: 150px;
 	}
 	
-	.portrait-small {
-	float: none;
-	border: 1px solid #333;
-	margin-right: 0px;
-	margin: auto;
-}
 }
 
 
