@@ -56,14 +56,18 @@ Text Domain: wintermute
 	9.2. Entries
 	9.3. Page Content
 	9.4. Buttons
-	9.5. Widgets
-	9.6. Sidebars
-	9.7. Site Footer
-	9.8. Footer Widgets
+	9.5. Calendar
+	9.6. Entry Meta
+	9.7. Pagination
+	9.8. Entry Comments
+	9.9. Sidebar
+	9.10. Footer Widgets
+	9.11. Site Footer
+	9.12. Columns
 10. Media Queries
-	10.1. Max-width: 1320px
-	10.2. Max-width: 1172px
-	10.3. Max-width: 1023px
+	10.1. Max-width: 1350px
+	10.2. Max-width: 1150px
+	10.3. Max-width: 1024px
 	10.4. Max-width: 860px
 	10.5. Max-width: 639px
 	10.6. Max-width: 400px
@@ -917,6 +921,11 @@ img.alignright,
 	margin-bottom: 0;
 }
 
+.site-header .widget-area .search-form {
+	width: 350px;
+	float: right;
+}
+
 /* 8. Site Navigation
 ---------------------------------------------------------------------------- */
 
@@ -962,7 +971,7 @@ img.alignright,
 	left: -9999px;
 	opacity: 0;
 	position: absolute;
-	width: 300px;
+	width: 250px;
 	z-index: 99;
 }
 
@@ -973,7 +982,7 @@ img.alignright,
 	font-size: 18px;
 	padding: 10px;
 	position: relative;
-	width: 300px;
+	width: 250px;
 	word-wrap: break-word;
 }
 
@@ -1021,7 +1030,7 @@ img.alignright,
 	visibility: hidden;
 }
 
-/* 7.2. Site Header Navigation
+/* 8.2. Site Header Navigation
 --------------------------------------------- */
 
 .site-header .genesis-nav-menu li li {
@@ -1032,7 +1041,7 @@ img.alignright,
 	margin-top: 17px;
 }
 
-/* 7.3. After Header Navigation
+/* 8.3. After Header Navigation
 --------------------------------------------- */
 
 .menu-primary {
@@ -1041,7 +1050,7 @@ img.alignright,
 	font-size: 18px;
 }
 
-/* 7.4. Footer Navigation
+/* 8.4. Footer Navigation
 --------------------------------------------- */
 
 .site-footer .genesis-nav-menu {
@@ -1052,7 +1061,7 @@ img.alignright,
 	padding: 0 20px 10px;
 }
 
-/* 7.5. SuperSide Me
+/* 8.5. SuperSide Me
 --------------------------------------------- */
 
 .slide-nav-link {
@@ -1065,8 +1074,8 @@ img.alignright,
 }
 
 .slide-nav-link:hover, .slide-nav-link:focus, .slide-nav-link:active, .slide-nav-link:visited {
-	background-color: #fff !important;
-	color: #111 !important;
+	background-color: #333 !important;
+	color: #fff !important;
 }
 
 .sidr .widget {
@@ -1096,7 +1105,7 @@ img.alignright,
 	font-size: 16px !important;
 }
 
-/* 7.6. Entry Content Menu [DEPRECATED]
+/* 8.6. Entry Content Menu [DEPRECATED]
 --------------------------------------------- */
 
 .menu-border .menu {
@@ -1244,6 +1253,18 @@ img.alignright,
 	 width: 100%;
 }
 
+.banner-text {
+	width: 100%;
+	padding: 10px;
+	color: white;
+	background-color: rgba(0,0,0,0.5);
+	text-shadow: 1px 1px 5px #000000;
+}
+
+.blox-editor-wrap p {
+	margin: 0;
+}
+
 /* 9.2. Entry Content
 --------------------------------------------- */
 
@@ -1353,6 +1374,15 @@ img.alignright,
 	float: left;
 	border: 1px solid #333;
 	margin-right: 15px !important;
+}
+
+hr.wp-block-separator {
+	border-top: 1px solid #ccc !important;
+}
+
+.wp-block-nk-awb {
+	padding-left: 0 !important;
+	padding-right: 0 !important;
 }
 
 /* 9.4. Buttons
@@ -1746,6 +1776,18 @@ p.entry-meta {
 	margin-bottom: 0;
 }
 
+/* 9.11. Columns
+--------------------------------------------- */
+
+/* Add vertical breathing room to the full row of columns. */
+.wp-block-columns {
+  margin: 20px 0;
+}
+
+/* Add horiztonal breathing room between individual columns. */
+.wp-block-column {
+  margin: 0 20px;
+}
 
 /* 10. Media Queries
 ---------------------------------------------------------------------------- */
@@ -1773,13 +1815,44 @@ p.entry-meta {
 		padding-left: 10vw;
 		padding-right: 10vw;
 	}
+	
+	.picture-text-button {
+		width: 200px;
+	}
 
 }
 
-/* 10.2. Max-width: 1172px
+/* 10.2 Max-width: 1150px
 --------------------------------------------- */
 
-@media only screen and (max-width: 1172px) {
+@media only screen and (max-width: 1150px) {
+	
+	.site-header .widget-area {
+		width: 410px;
+	}
+	
+	.nav-header {
+		margin-top: 19px;
+	}
+	
+	.genesis-nav-menu {
+		font-size: 18px;
+	}
+	
+	.genesis-nav-menu .sub-menu a {
+		font-size: 16px;
+	}
+	
+	.genesis-nav-menu a {
+		padding: 10px 2px 10px 3px;
+	}
+	
+}
+
+/* 10.3. Max-width: 1024px
+--------------------------------------------- */
+
+@media only screen and (max-width: 1024px) {
 
 	.wp-custom-logo .title-area {
 		margin-top: 5px;
@@ -1845,6 +1918,10 @@ p.entry-meta {
 		border: 1px solid #fff;
 		margin-right: 0px;
 		margin: auto;
+	}
+	
+	.wp-block-columns {
+		display: block !important;
 	}
 
 }
