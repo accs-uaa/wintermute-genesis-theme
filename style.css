@@ -571,8 +571,48 @@ th:first-child {
 .site-inner {
 	clear: both;
 	margin: 0 auto;
-	width: 1100px;
 }
+
+.site-inner,
+.wrap {
+	width: 100%;
+	padding-left: 5vw;
+	padding-right: 5vw;
+}
+
+.full-width-content .content {
+	width: 100%;
+}
+
+.sidebar-content .content {
+	float: right;
+	width: calc(100% - 300px);
+}
+
+.sidebar-content .sidebar-primary {
+	font-size: 16px;
+	line-height: 1.5;
+	background-color: #1e5c8d;
+	color: #fff;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 300px;
+	padding: 40px 20px 20px 20px;
+	height: 100vh;
+	float: left;
+	border-right: 1px solid #333;
+}
+
+.admin-bar .sidebar-primary {
+	top: 28px;
+}
+
+.entry-content {
+	max-width: 1100px;
+	margin: auto;
+}
+
 
 /* 4. Common Classes
 ---------------------------------------------------------------------------- */
@@ -852,10 +892,23 @@ img.alignright,
 .site-header {
 	background-color: #fff;
 	border-bottom: 1px solid #333333;
+	position: relative;
+	z-index: 99;
+	float: right;
+	padding-left: 5vw;
+	padding-right: 5vw;
+}
+
+.sidebar-content .site-header {
+	width: calc(100% - 300px);
+}
+
+.full-width-content .site-header {
+	width: 100%;
 }
 
 .site-header > .wrap {
-	width: 1100px;
+	max-width: 1100px;
 	margin: auto;
 	padding: 0;
 }
@@ -1213,6 +1266,20 @@ img.alignright,
 .entry-content-menu > .right {
 	float: right;
 }
+
+/* 8.7. Primary Sidebar Menu
+--------------------------------------------- */
+
+.sidebar-primary .menu {
+	font-size: 20px;
+	font-family: 'Roboto Condensed', sans-serif;
+}
+
+.sidebar-primary a {
+	color: #fff;
+	text-decoration: none;
+}
+
 
 /* 9. Content Area
 ---------------------------------------------------------------------------- */
@@ -1716,11 +1783,6 @@ p.entry-meta {
 /* 9.9. Sidebar
 --------------------------------------------- */
 
-.sidebar {
-	font-size: 16px;
-	line-height: 1.5;
-}
-
 .sidebar .widget {
 	margin-bottom: 40px;
 }
@@ -1765,15 +1827,22 @@ p.entry-meta {
 	line-height: 1.5;
 	padding-top: 30px;
 	padding-bottom: 30px;
+	float: right;
 }
 
-.site-footer > .wrap {
-	width: 1100px;
-	margin: auto;
+.full-width-content .site-footer {
+	width: 100%;
+}
+
+.sidebar-content .site-footer {
+	width: calc(100% - 300px);
 }
 
 .site-footer p {
 	margin-bottom: 0;
+	max-width: 1100px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 /* 9.11. Columns
@@ -1796,25 +1865,6 @@ p.entry-meta {
 --------------------------------------------- */
 
 @media only screen and (max-width: 1350px) {
-
-	.site-inner,
-	.wrap {
-		width: 100%;
-		padding-left: 10vw;
-		padding-right: 10vw;
-	}
-	
-	.site-header > .wrap {
-		width: 100%;
-		padding-left: 10vw;
-		padding-right: 10vw;
-	}
-	
-	.site-footer > .wrap {
-		width: 100%;
-		padding-left: 10vw;
-		padding-right: 10vw;
-	}
 	
 	.picture-text-button {
 		width: 200px;
@@ -1861,6 +1911,22 @@ p.entry-meta {
 	
 	.site-header .widget-area {
 		display: none;
+	}
+	
+	.sidebar-content .site-header {
+		width: 100%;
+	}
+	
+	.sidebar-content .sidebar-primary {
+		display: none;
+	}
+	
+	.sidebar-content .content {
+		width: 100%;
+	}
+	
+	.sidebar-content .site-footer {
+		width: 100%;
 	}
 	
 	.entry-title {
@@ -1930,22 +1996,6 @@ p.entry-meta {
 --------------------------------------------- */
 
 @media only screen and (max-width: 639px) {
-
-	.site-inner,
-	.wrap {
-		padding-left: 5vw;
-		padding-right: 5vw;
-	}
-	
-	.site-header > .wrap {
-		padding-left: 5vw;
-		padding-right: 5vw;
-	}
-	
-	.site-footer > .wrap {
-		padding-left: 5vw;
-		padding-right: 5vw;
-	}
 	
 	.slide-nav-link {
 		right: 5px !important;
