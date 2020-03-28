@@ -333,10 +333,10 @@ function prefix_remove_entry_header()
 	remove_action( 'genesis_entry_header', 'genesis_do_post_format_image', 4 );
 }
 
-//* Enqueue Open Sans Google font
+//* Enqueue Open Sans and Playfair Serif Google Font
 add_action( 'wp_enqueue_scripts', 'sp_load_google_fonts' );
 function sp_load_google_fonts() {
-	wp_enqueue_style( 'google-font-opensans', '//fonts.googleapis.com/css?family=Open+Sans|Roboto+Condensed', array(), CHILD_THEME_VERSION );
+	wp_enqueue_style( 'google-font-opensans', '//fonts.googleapis.com/css?family=Open+Sans|PT+Sans|PT+Sans+Narrow', array(), CHILD_THEME_VERSION );
 }
 
 //* Add mime types to for xml and zip to allow kml/kmz upload

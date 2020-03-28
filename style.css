@@ -72,6 +72,7 @@ Text Domain: wintermute
 	10.5. Max-width: 639px
 	10.6. Max-width: 400px
 11. Print Styles
+12. Firefox Error Corrections
 */
 
 
@@ -239,7 +240,7 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: "Roboto Condensed", sans-serif;
+	font-family: "PT Sans Narrow", sans-serif;
 	font-weight: 400;
 	line-height: 1.2;
 	margin: 0 0 10px;
@@ -595,17 +596,19 @@ th:first-child {
 	background-color: #1e5c8d;
 	color: #fff;
 	position: fixed;
-	top: 0;
+	top: 90px;
 	left: 0;
 	width: 300px;
-	padding: 40px 20px 20px 20px;
-	height: 100vh;
+	padding: 20px;
+	height: calc(100vh - 90px);
 	float: left;
 	border-right: 1px solid #333;
+	overflow-y: auto;
 }
 
 .admin-bar .sidebar-primary {
-	top: 28px;
+	top: 125px;
+	height: calc(100vh - 125px);
 }
 
 .entry-content, .archive-page {
@@ -891,12 +894,11 @@ img.alignright,
 
 .site-header {
 	background-color: #fff;
-	border-bottom: 1px solid #333333;
 	position: relative;
 	z-index: 99;
-	float: right;
 	padding-left: 5vw;
 	padding-right: 5vw;
+	width: 100%;
 }
 
 .sidebar-content .site-header {
@@ -904,7 +906,7 @@ img.alignright,
 }
 
 .full-width-content .site-header {
-	width: 100%;
+	border-bottom: 1px solid #333333;
 }
 
 .site-header > .wrap {
@@ -917,22 +919,34 @@ img.alignright,
 --------------------------------------------- */
 
 .title-area {
-	float: left;
-	padding: 10px 0;
-	max-width: 350px;
-	width: 70vw;
-}
-
-.wp-custom-logo .title-area {
-	margin-top: 10px;
-	margin-bottom: 10px;
-	max-width: 390px;
 	padding: 0;
 }
 
-.wp-custom-logo .title-area img {
+.full-width-content .title-area {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	max-width: 390px;
+}
+
+.sidebar-content .title-area {
+	margin: 0;
+	max-width: 300px;
+	position: fixed;
+	left: 0;
+	top: 0;
+}
+
+.admin-bar .title-area {
+	top: 32px;
+}
+
+.full-width-content .title-area img {
 	max-width: 390px;
 	width: 90vw;
+}
+
+.sidebar-content .title-area img {
+	width: 300px;
 }
 
 .site-title {
@@ -985,8 +999,8 @@ img.alignright,
 .genesis-nav-menu {
 	clear: both;
 	font-size: 20px;
-	font-weight: 600;
-	font-family: 'Roboto Condensed', sans-serif;
+	font-weight: 400;
+	font-family: 'PT Sans', sans-serif;
 	line-height: 1;
 	width: 100%;
 }
@@ -1172,8 +1186,8 @@ img.alignright,
 .entry-content-menu .menu {
 	clear: both;
 	font-size: 18px;
-	font-weight: 600;
-	font-family: 'Roboto Condensed', sans-serif;
+	font-weight: 400;
+	font-family: 'PT Sans', sans-serif;
 	line-height: 1;
 	width: 100%;
 	text-align: center;
@@ -1271,8 +1285,9 @@ img.alignright,
 --------------------------------------------- */
 
 .sidebar-primary .menu {
-	font-size: 20px;
-	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 18px;
+	font-family: "PT Sans", sans-serif;
+	font-weight: 400;
 }
 
 .sidebar-primary a {
@@ -1288,7 +1303,6 @@ img.alignright,
 --------------------------------------------- */
 
 .banner-header {
-	width: 100%;
 	overflow-x: hidden;
 	overflow-y: hidden;
 	max-height: 400px;
@@ -1297,6 +1311,15 @@ img.alignright,
 	justify-content: center;
 	align-items: center;
 	border-bottom: 1px solid #333333;
+}
+
+.full-width-content .banner-header {
+	width: 100%;
+}
+
+.sidebar-content .banner-header {
+	width: calc(100% - 300px);
+	float: right;
 }
 
 .banner-header img {
@@ -1450,6 +1473,21 @@ hr.wp-block-separator {
 .wp-block-nk-awb {
 	padding-left: 0 !important;
 	padding-right: 0 !important;
+}
+
+.wp-caption-text.gallery-caption {
+	font-style: italic;
+	font-weight: 400;
+}
+
+.drawing {
+	display: block;
+	text-align: center;
+}
+
+.drawing img {
+	max-height: 600px;
+	margin: auto;
 }
 
 /* 9.4. Buttons
@@ -1903,11 +1941,6 @@ p.entry-meta {
 --------------------------------------------- */
 
 @media only screen and (max-width: 1024px) {
-
-	.wp-custom-logo .title-area {
-		margin-top: 5px;
-		margin-bottom: 5px;
-	}
 	
 	.site-header .widget-area {
 		display: none;
@@ -1915,6 +1948,19 @@ p.entry-meta {
 	
 	.sidebar-content .site-header {
 		width: 100%;
+	}
+
+	.wp-custom-logo .title-area {
+		margin-top: 5px;
+		margin-bottom: 5px;
+	}
+
+	.sidebar-content .title-area {
+		position: relative;
+	}
+
+	.admin-bar .title-area {
+		top: 0;
 	}
 	
 	.sidebar-content .sidebar-primary {
@@ -1926,6 +1972,10 @@ p.entry-meta {
 	}
 	
 	.sidebar-content .site-footer {
+		width: 100%;
+	}
+
+	.sidebar-content .banner-header {
 		width: 100%;
 	}
 	
@@ -2166,4 +2216,28 @@ p.entry-meta {
 		page-break-before: avoid;
 	}
 
+}
+
+/* 11. Print Styles
+---------------------------------------------------------------------------- */
+
+/* Because Firefox does not interpret colors correctly, it is necessary to correct the colors to match the static logo image.
+ */
+
+@-moz-document url-prefix() {
+	.sidebar-content .sidebar-primary {
+		background-color: #3e5b8b;
+	}
+
+	.sidebar-content .site-header {
+		background-color: #3e5b8b;
+	}
+
+	.sidebar-content .slide-nav-link {
+		background-color: #3e5b8b !important;
+	}
+
+	.sidebar-content .sidr {
+		background-color: #3e5b8b !important;
+	}
 }

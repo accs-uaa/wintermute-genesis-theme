@@ -38,7 +38,7 @@ Additional menus should be added conditionally to the after header area.
 
 Media files (photos for figures, buttons, banners, etc.) should always be resized and compressed using Adobe Fireworks prior to upload. The "Alt Text" and "Description" must always be filled out when uploading media files. Photographs should originate from high resolution mirrorless or DSLR cameras (not point and shoot or phone cameras). Figures that are generated in software applications, such as ArcGIS, should be output at 300 dpi. Media should be formatted to the following resolutions:
 1. Banners: 2000x1000 jpg
-2. Landscape Figures: 1600x1200 jpg
+2. Landscape Figures: 1800x1200 jpg
 3. Portrait Figures: 1200x1600 jpg
 4. Staff Photo: 1200x1200 jpg
 5. Picture Button: 300x300 jpg or png
