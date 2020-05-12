@@ -333,7 +333,7 @@ function prefix_remove_entry_header()
 	remove_action( 'genesis_entry_header', 'genesis_do_post_format_image', 4 );
 }
 
-//* Enqueue Open Sans and Playfair Serif Google Font
+//* Enqueue Open Sans and PT Sans Google Fonts
 add_action( 'wp_enqueue_scripts', 'sp_load_google_fonts' );
 function sp_load_google_fonts() {
 	wp_enqueue_style( 'google-font-opensans', '//fonts.googleapis.com/css?family=Open+Sans|PT+Sans|PT+Sans+Narrow', array(), CHILD_THEME_VERSION );
@@ -382,4 +382,10 @@ function prefix_load_scripts() {
         'subMenu'  => 'Menu',
     );
     wp_localize_script( 'leaven-responsive-menu', 'LeavenL10n', $output );
+}
+
+
+//* Remove admin bar on frontend for subscribers
+if ( ! current_user_can( 'manage_options' ) ) {
+    add_filter('show_admin_bar', '__return_false');
 }
