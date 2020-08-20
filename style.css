@@ -926,6 +926,7 @@ img.alignright,
 	margin-top: 10px;
 	margin-bottom: 10px;
 	max-width: 390px;
+	float: left;
 }
 
 .sidebar-content .title-area {
@@ -980,7 +981,7 @@ img.alignright,
 .site-header .widget-area {
 	float: right;
 	text-align: right;
-	width: 500px;
+	width: 580px;
 	margin-top: 20px;
 }
 
@@ -1015,7 +1016,7 @@ img.alignright,
 .genesis-nav-menu a {
 	color: #111;
 	display: block;
-	padding: 10px 10px 10px 5px;
+	padding: 10px 5px 11px 5px;
 	text-decoration: none;
 	font-weight: 400;
 	outline: none;
@@ -1916,7 +1917,7 @@ p.entry-meta {
 @media only screen and (max-width: 1150px) {
 	
 	.site-header .widget-area {
-		width: 410px;
+		width: 480px;
 	}
 	
 	.nav-header {
@@ -1932,7 +1933,7 @@ p.entry-meta {
 	}
 	
 	.genesis-nav-menu a {
-		padding: 10px 2px 10px 3px;
+		padding: 11px 2px 12px 3px;
 	}
 	
 }
