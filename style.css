@@ -4,7 +4,7 @@ Theme URI: https://github.com/accs-uaa/wintermute-genesis-theme
 Description: Child theme for the Genesis Framework and Wordpress 5.0 or greater. Intended to be used with Gutenberg.
 Author: Timm Nawrocki
 Author URI: https://github.com/accs-uaa
-	
+
 Tags: accessibility-ready, custom-colors, custom-logo, custom-menu, featured-images, footer-widgets, full-width-template, left-sidebar, one-column, right-sidebar, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, two-columns
 
 Template: genesis
@@ -477,7 +477,6 @@ table {
 	line-height: 2;
 	margin-bottom: 40px;
 	width: 100%;
-	word-break: break-all;
 }
 
 tbody {
@@ -1590,7 +1589,7 @@ hr.wp-block-separator {
 .picture-button a {
 	color: #fff;
 	text-shadow:
-     -1px -1px 1px #000,  
+     -1px -1px 1px #000,
       1px -1px 1px #000,
       -1px 1px 1px #000,
        1px 1px 1px #000;
@@ -1904,7 +1903,7 @@ p.entry-meta {
 --------------------------------------------- */
 
 @media only screen and (max-width: 1350px) {
-	
+
 	.picture-text-button {
 		width: 200px;
 	}
@@ -1915,38 +1914,38 @@ p.entry-meta {
 --------------------------------------------- */
 
 @media only screen and (max-width: 1150px) {
-	
+
 	.site-header .widget-area {
 		width: 480px;
 	}
-	
+
 	.nav-header {
 		margin-top: 19px;
 	}
-	
+
 	.genesis-nav-menu {
 		font-size: 18px;
 	}
-	
+
 	.genesis-nav-menu .sub-menu a {
 		font-size: 16px;
 	}
-	
+
 	.genesis-nav-menu a {
 		padding: 11px 2px 12px 3px;
 	}
-	
+
 }
 
 /* 10.3. Max-width: 1024px
 --------------------------------------------- */
 
 @media only screen and (max-width: 1024px) {
-	
+
 	.site-header .widget-area {
 		display: none;
 	}
-	
+
 	.sidebar-content .site-header {
 		width: 100%;
 	}
@@ -1963,15 +1962,15 @@ p.entry-meta {
 	.admin-bar .title-area {
 		top: 0;
 	}
-	
+
 	.sidebar-content .sidebar-primary {
 		display: none;
 	}
-	
+
 	.sidebar-content .content {
 		width: 100%;
 	}
-	
+
 	.sidebar-content .site-footer {
 		width: 100%;
 	}
@@ -1979,15 +1978,15 @@ p.entry-meta {
 	.sidebar-content .banner-header {
 		width: 100%;
 	}
-	
+
 	.entry-title {
 		margin-top: 10px;
 	}
-	
+
 	.nav-primary {
 		display: inline;
 	}
-	
+
 	.entry-content-hide {
 		display: none;
 	}
@@ -2025,18 +2024,18 @@ p.entry-meta {
 		margin: 0;
 		width: 100%;
 	}
-	
+
 	.mission {
 		font-size: 20px;
 	}
-	
+
 	.portrait-small {
 		float: none;
 		border: 1px solid #fff;
 		margin-right: 0px;
 		margin: auto;
 	}
-	
+
 	.wp-block-columns {
 		display: block !important;
 	}
@@ -2047,22 +2046,22 @@ p.entry-meta {
 --------------------------------------------- */
 
 @media only screen and (max-width: 639px) {
-	
+
 	.slide-nav-link {
 		right: 5px !important;
 		font-size: 18px;
 	}
-	
+
 	.two-item-button {
 		width: 300px;
 		margin-left: auto;
 		margin-right: auto;
 	}
-	
+
 	.portal-button {
 		width: 150px;
 	}
-	
+
 }
 
 
@@ -2070,7 +2069,7 @@ p.entry-meta {
 --------------------------------------------- */
 
 @media only screen and (max-width: 400px) {
-	
+
 	.title-area {
 		width: 65vw;
 	}
