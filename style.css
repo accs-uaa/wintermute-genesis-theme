@@ -734,6 +734,10 @@ th:first-child {
 /* 4.5. WordPress
 --------------------------------------------- */
 
+.aligncenter {
+	text-align: center;
+}
+
 a.aligncenter img {
 	display: block;
 	margin: 0 auto;
@@ -1524,12 +1528,8 @@ hr.wp-block-separator {
 }
 
 .picture-text-button img {
-	padding-bottom: 15px;
-}
-
-.picture-text-button img {
+	margin-bottom: 10px;
 	display: inline-block;
-	margin-bottom: -10px;
 }
 
 .picture-text-button a {
