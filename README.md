@@ -63,4 +63,4 @@ None
 
 ### License
 
-This project is private and can be used by Alaska Center for Conservation Science and/or Timm Nawrocki.
+This project is provided under the GNU General Public License v3.0. It is free to use and modify in part or in whole.
