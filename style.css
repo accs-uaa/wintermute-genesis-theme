@@ -1368,8 +1368,9 @@ img.alignright,
 
 .entry-content ol,
 .entry-content ul {
-	margin-bottom: 30px;
-	padding-left: 40px;
+	margin-bottom: 20px;
+	margin-left: 20px;
+	margin-right: 20px;
 }
 
 .entry-content ol > li {
@@ -1502,6 +1503,12 @@ hr.wp-block-separator {
 	font-family: "Open Sans", sans-serif !important;
 	padding: 10px 20px !important;
 	font-weight: 400 !important;
+	background-color: #333;
+}
+
+.content .wp-block-button .wp-block-button__link:focus,
+.content .wp-block-button .wp-block-button__link:hover {
+	background-color: #666 !important;
 }
 
 .button-flexbox {
@@ -1638,7 +1645,6 @@ hr.wp-block-separator {
 	display: inline-block;
 	vertical-align: bottom;
 	text-align: center;
-	font-weight: bold;
 	-webkit-transition: all 0.2s ease-in-out;
 	-moz-transition: all 0.2s ease-in-out;
 	-ms-transition: all 0.2s ease-in-out;
@@ -1657,6 +1663,12 @@ hr.wp-block-separator {
 
 .logo-thumbnail a:hover {
 	text-decoration: none !important;
+}
+
+.logo-thumbnail img {
+	width: 100px;
+	margin-left: 25px;
+	margin-right:25px;
 }
 
 .portal-button {
