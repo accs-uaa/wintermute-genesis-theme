@@ -182,8 +182,8 @@ a {
 
 a:focus,
 a:hover {
+	text-decoration: underline
 	color: #111;
-	text-decoration: none;
 	outline: 0;
 }
 
@@ -1408,7 +1408,7 @@ img.alignright,
 --------------------------------------------- */
 
 .mission {
-	font-size: 22px;
+	font-size: 140%;
 	margin-top: 20px;
 }
 
@@ -1498,6 +1498,10 @@ hr.wp-block-separator {
 /* 9.4. Buttons
 --------------------------------------------- */
 
+a.dt-button, button.dt-button, div.dt-button, input.dt-button {
+	overflow: auto !important;
+}
+
 .content .wp-block-button .wp-block-button__link {
 	font-size: 18px !important;
 	font-family: "Open Sans", sans-serif !important;
@@ -1513,7 +1517,6 @@ hr.wp-block-separator {
 
 .button-flexbox {
 	display: flex;
-	overflow: hidden;
 	margin-top: 20px;
 	margin-bottom: 20px;
 	flex-wrap: wrap;
@@ -1584,7 +1587,6 @@ hr.wp-block-separator {
 	transition: all 0.5s ease-in-out;
 	background-position: center center;
 	background-size: cover;
-	overflow: hidden;
 }
 
 .picture-button:hover {
@@ -1630,7 +1632,7 @@ hr.wp-block-separator {
 
 .picture-button p {
 	text-align: center;
-	font-size: 20px;
+	font-size: 1.3em;
 	padding-left: 10px;
 	padding-right: 10px;
 }
