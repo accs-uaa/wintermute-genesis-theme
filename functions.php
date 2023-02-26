@@ -306,31 +306,10 @@ function sp_search_text( $text ) {
 	return esc_attr( 'Search...' );
 }
 
-//* Add Dashicon to search form button 
+//* Add Dashicon to search form button
 add_filter( 'genesis_search_button_text', 'wpsites_search_button_icon' );
 function wpsites_search_button_icon( $text ) {
 	return esc_attr( '&#xf179;' );
-}
-
-//* Remove entry header from home page
-add_action( 'genesis_before', 'prefix_remove_entry_header' );
-function prefix_remove_entry_header()
-{
-
-	if ( ! is_front_page() ) { return; }
-
-	//* Remove the entry header markup (requires HTML5 theme support)
-	remove_action( 'genesis_entry_header', 'genesis_entry_header_markup_open', 5 );
-	remove_action( 'genesis_entry_header', 'genesis_entry_header_markup_close', 15 );
-
-	//* Remove the entry title (requires HTML5 theme support)
-	remove_action( 'genesis_entry_header', 'genesis_do_post_title' );
-
-	//* Remove the entry meta in the entry header (requires HTML5 theme support)
-	remove_action( 'genesis_entry_header', 'genesis_post_info', 12 );
-
-	//* Remove the post format image (requires HTML5 theme support)
-	remove_action( 'genesis_entry_header', 'genesis_do_post_format_image', 4 );
 }
 
 //* Enqueue Open Sans and PT Sans Google Fonts
@@ -352,15 +331,14 @@ function disable_mytheme_action() {
       define('DISALLOW_FILE_EDIT', TRUE);
     }
     add_action('init','disable_mytheme_action');
-	
+
 //* Remove Admin Menus from Dashboard Sidebar
-function remove_menus() 
+function remove_menus()
 	{
 	global $submenu;
 	remove_submenu_page ( 'themes.php', 'theme-editor.php' ); // Appearance-->Editor
 }
 add_action('admin_menu', 'remove_menus', 102);
-add_action( 'genesis_before', 'prefix_remove_entry_header' );
 
 //* Remove admin bar for subscribers
 add_action('set_current_user', 'cc_hide_admin_bar');
@@ -389,3 +367,27 @@ function prefix_load_scripts() {
 if ( ! current_user_can( 'manage_options' ) ) {
     add_filter('show_admin_bar', '__return_false');
 }
+
+
+//* Add after header div elements for menu and banner
+add_action( 'genesis_after_header', 'add_custom_menu_location' );
+function add_custom_menu_location() {
+echo'<div class="responsive-menu-location"></div>';
+}
+
+//* Add custom header images
+add_action( 'genesis_after_header', 'add_custom_header_image' );
+function add_custom_header_image() {
+if ( is_singular(array('post','page') ) && genesis_get_custom_field('custom_headers') ) :
+echo '<div class="banner-header">'. genesis_get_custom_field('custom_headers') .'</div>';
+endif;
+}
+
+//* Insert scopes on TablePress tables
+function ada_tablepress_add_scope( $tag_attributes, $table_id, $cell_content, $row_number, $col_number, $colspan, $rowspan ) {
+    if ( $row_number === 1 ) {
+        $tag_attributes['scope'] = "col";
+    }
+    return $tag_attributes;
+}
+add_filter( 'tablepress_cell_tag_attributes', 'ada_tablepress_add_scope', 10, 7 );

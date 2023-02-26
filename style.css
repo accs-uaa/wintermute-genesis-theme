@@ -182,8 +182,8 @@ a {
 
 a:focus,
 a:hover {
-	text-decoration: underline
 	color: #111;
+	text-decoration: none;
 	outline: 0;
 }
 
@@ -505,35 +505,6 @@ th:first-child {
 
 /* 2.7. Screen Reader Text
 --------------------------------------------- */
-
-.screen-reader-shortcut,
-.screen-reader-text,
-.screen-reader-text span {
-	border: 0;
-	clip: rect(0, 0, 0, 0);
-	height: 1px;
-	overflow: hidden;
-	position: absolute !important;
-	width: 1px;
-	word-wrap: normal !important;
-}
-
-.screen-reader-text:focus,
-.screen-reader-shortcut:focus,
-.widget_search input[type="submit"]:focus {
-	background: #fff;
-	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
-	clip: auto !important;
-	color: #333;
-	display: block;
-	font-size: 1em;
-	font-weight: 700;
-	height: auto;
-	padding: 15px 23px 14px;
-	text-decoration: none;
-	width: auto;
-	z-index: 100000; /* Above WP toolbar. */
-}
 
 .more-link {
 	display: inline-block;
@@ -871,24 +842,24 @@ img.alignright,
 ---------------------------------------------------------------------------- */
 
 .genesis-skip-link {
-	margin: 0;
-}
-
-.genesis-skip-link .skip-link-hidden {
-	display: none;
-	visibility: hidden;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	background-color: #333333;
+	text-align: center;
 }
 
 .genesis-skip-link li {
-	height: 0;
+	width: auto;
 	list-style: none;
-	width: 0;
+	text-align: center;
+	margin-left: 5px;
+	margin-right: 5px;
+	display: inline-block;
 }
 
-/* Display outline on focus */
-:focus {
-	color: #333;
-	outline: 0;
+.genesis-skip-link a {
+	color: #ffffff;
+	font-size: 14px;
 }
 
 
@@ -1368,9 +1339,8 @@ img.alignright,
 
 .entry-content ol,
 .entry-content ul {
-	margin-bottom: 20px;
-	margin-left: 20px;
-	margin-right: 20px;
+	margin-bottom: 30px;
+	padding-left: 40px;
 }
 
 .entry-content ol > li {
@@ -1408,7 +1378,7 @@ img.alignright,
 --------------------------------------------- */
 
 .mission {
-	font-size: 140%;
+	font-size: 22px;
 	margin-top: 20px;
 }
 
@@ -1495,28 +1465,27 @@ hr.wp-block-separator {
 	margin: auto;
 }
 
+.wp-block-gallery {
+	margin-bottom: 20px;
+}
+
+.wp-block-buttons {
+	margin-bottom: 20px;
+}
+
 /* 9.4. Buttons
 --------------------------------------------- */
-
-a.dt-button, button.dt-button, div.dt-button, input.dt-button {
-	overflow: auto !important;
-}
 
 .content .wp-block-button .wp-block-button__link {
 	font-size: 18px !important;
 	font-family: "Open Sans", sans-serif !important;
 	padding: 10px 20px !important;
 	font-weight: 400 !important;
-	background-color: #333;
-}
-
-.content .wp-block-button .wp-block-button__link:focus,
-.content .wp-block-button .wp-block-button__link:hover {
-	background-color: #666 !important;
 }
 
 .button-flexbox {
 	display: flex;
+	overflow: hidden;
 	margin-top: 20px;
 	margin-bottom: 20px;
 	flex-wrap: wrap;
@@ -1587,6 +1556,7 @@ a.dt-button, button.dt-button, div.dt-button, input.dt-button {
 	transition: all 0.5s ease-in-out;
 	background-position: center center;
 	background-size: cover;
+	overflow: hidden;
 }
 
 .picture-button:hover {
@@ -1632,7 +1602,7 @@ a.dt-button, button.dt-button, div.dt-button, input.dt-button {
 
 .picture-button p {
 	text-align: center;
-	font-size: 1.3em;
+	font-size: 20px;
 	padding-left: 10px;
 	padding-right: 10px;
 }
@@ -1647,6 +1617,7 @@ a.dt-button, button.dt-button, div.dt-button, input.dt-button {
 	display: inline-block;
 	vertical-align: bottom;
 	text-align: center;
+	font-weight: bold;
 	-webkit-transition: all 0.2s ease-in-out;
 	-moz-transition: all 0.2s ease-in-out;
 	-ms-transition: all 0.2s ease-in-out;
@@ -1665,12 +1636,6 @@ a.dt-button, button.dt-button, div.dt-button, input.dt-button {
 
 .logo-thumbnail a:hover {
 	text-decoration: none !important;
-}
-
-.logo-thumbnail img {
-	width: 100px;
-	margin-left: 25px;
-	margin-right:25px;
 }
 
 .portal-button {
