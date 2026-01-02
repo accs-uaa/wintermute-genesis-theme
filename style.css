@@ -899,7 +899,7 @@ img.alignright,
 .full-width-content .title-area {
 	margin-top: 10px;
 	margin-bottom: 10px;
-	max-width: 390px;
+	max-width: 350px;
 	float: left;
 }
 
@@ -916,7 +916,7 @@ img.alignright,
 }
 
 .full-width-content .title-area img {
-	max-width: 390px;
+	max-width: 350px;
 	width: 90vw;
 }
 
