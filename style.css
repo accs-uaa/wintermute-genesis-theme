@@ -1293,13 +1293,12 @@ img.alignright,
 }
 
 .sidebar-content .banner-header {
-	width: calc(100% - 320px);
+	width: calc(100% - 300px);
 	float: right;
 }
 
 .banner-header img {
 	width: 100%;
-	object-position: center 30%;
 }
 
 .banner-entry {
